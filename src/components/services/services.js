@@ -29,7 +29,7 @@ const services = () => {
             </li>
             <li>
               <BiCheck className='service_list-icon'/>
-              <p>Colaborate with teams.</p>
+              <p>Collaborate with teams.</p>
             </li>
             <li>
               <BiCheck className='service_list-icon'/>
