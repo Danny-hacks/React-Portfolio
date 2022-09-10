@@ -1,7 +1,7 @@
 import React from 'react';
 import './portfolio.css';
 import IMG1 from '../../assets/portfolio1.png'
-import IMG2 from '../../assets/portfolio2.png'
+import IMG2 from '../../assets/portfolio2.PNG'
 import IMG3 from '../../assets/portfolio3.PNG'
 import IMG4 from '../../assets/portfolio4.png'
 import IMG5 from '../../assets/portfolio5.png'
@@ -19,9 +19,9 @@ const projects = [
   {
     id: 2,
     image: IMG2,
-    title: "Simple Portfolio Website",
-    github: "https://github.com/Danny-hacks/portfolio_task",
-    demo: "https://simple-port-website.netlify.app/"
+    title: "Color Generator App",
+    github: "https://github.com/Danny-hacks/Color-Generator",
+    demo: "https://colour-finder.netlify.app/"
   },
   {
     id: 3,
@@ -47,9 +47,9 @@ const projects = [
   {
     id: 6,
     image: IMG6,
-    title: "Testimonial Page",
-    github: "https://github.com/Danny-hacks/Testimonials-Section",
-    demo: "image.png"
+    title: "Simple Portfolio Website",
+    github: "https://github.com/Danny-hacks/portfolio_task",
+    demo: "https://simple-port-website.netlify.app/"
   }
 ]
 
