@@ -30,7 +30,10 @@ const Footer = () => {
 
       <div className='footer_socials'>
         {/* <a href="https://twitter.com"><IoLogoTwitter/></a> */}
-        <a href='https://linkdin.com' target='_blank'>
+        <a
+          href='https://www.linkedin.com/in/daniel-obiefule-2a13381a3/'
+          target='_blank'
+        >
           <BsLinkedin />
         </a>
       </div>
