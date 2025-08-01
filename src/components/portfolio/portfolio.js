@@ -69,14 +69,14 @@ const projects = [
     github: "https://github.com/Danny-hacks/Background-Color-Flipper",
     demo: "https://bvckground-color-flipper.netlify.app",
   },
-  {
-    id: 7,
-    image: IMG7,
-    title: "Simple Portfolio Website",
-    technologies: ["JavaScript", "HTML", "CSS"],
-    github: "https://github.com/Danny-hacks/portfolio_task",
-    demo: "https://simple-port-website.netlify.app/",
-  },
+  // {
+  //   id: 7,
+  //   image: IMG7,
+  //   title: "Simple Portfolio Website",
+  //   technologies: ["JavaScript", "HTML", "CSS"],
+  //   github: "https://github.com/Danny-hacks/portfolio_task",
+  //   demo: "https://simple-port-website.netlify.app/",
+  // },
 ];
 
 const techIcons = {
