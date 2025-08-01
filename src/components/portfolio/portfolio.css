@@ -2,8 +2,16 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
+    min-height: calc(2 * 400px + 2rem); /* Enough height to simulate 2 rows of 3 items */
   }
   
+  /* Placeholder items for spacing */
+  .portfolio_item.placeholder {
+    visibility: hidden;
+    pointer-events: none;
+  }
+  
+  /* Portfolio Item */
   .portfolio_item {
     background: var(--body-bg-variant);
     padding: 1.5rem;
@@ -14,6 +22,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    min-height: 400px;
   }
   
   .portfolio_item:hover {
@@ -91,6 +100,7 @@
     .portfolio_container {
       grid-template-columns: repeat(2, 1fr);
       gap: 1.5rem;
+      min-height: calc(3 * 400px + 2rem); /* 3 items vertically spaced */
     }
   }
   
@@ -98,9 +108,11 @@
     .portfolio_container {
       grid-template-columns: 1fr;
       gap: 1rem;
+      min-height: calc(3 * 400px + 2rem); /* single column with spacing for 3 items */
     }
   
     .portfolio_tech {
       justify-content: flex-start;
     }
-  }  
+  }
+  
