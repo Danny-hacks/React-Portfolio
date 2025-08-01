@@ -16,8 +16,7 @@ import IMG3 from "../../assets/portfolio1.png";
 import IMG4 from "../../assets/portfolio2.png";
 import IMG5 from "../../assets/portfolio3.PNG";
 import IMG6 from "../../assets/portfolio4.png";
-import IMG7 from "../../assets/portfolio5.png";
-import IMG8 from "../../assets/portfolio6.png";
+import IMG7 from "../../assets/portfolio6.png";
 
 const projects = [
   {
@@ -42,7 +41,7 @@ const projects = [
     id: 3,
     image: IMG3,
     title: "TodoList WebApp",
-    technologies: ["React", "CSS"],
+    technologies: ["JavaScript", "HTML", "CSS"],
     github: "https://github.com/Danny-hacks/TodoList-WebApp",
     demo: "https://webapp-todolist.netlify.app",
   },
@@ -50,7 +49,7 @@ const projects = [
     id: 4,
     image: IMG4,
     title: "Color Generator App",
-    technologies: ["JavaScript", "HTML", "CSS"],
+    technologies: ["React", "CSS"],
     github: "https://github.com/Danny-hacks/Color-Generator",
     demo: "https://colour-finder.netlify.app/",
   },
@@ -73,16 +72,8 @@ const projects = [
   {
     id: 7,
     image: IMG7,
-    title: "Responsive Landing Page",
-    technologies: ["HTML", "CSS"],
-    github: "https://github.com/Danny-hacks/responsive-design",
-    demo: "https://resp-design.netlify.app",
-  },
-  {
-    id: 8,
-    image: IMG8,
     title: "Simple Portfolio Website",
-    technologies: ["HTML", "CSS"],
+    technologies: ["JavaScript", "HTML", "CSS"],
     github: "https://github.com/Danny-hacks/portfolio_task",
     demo: "https://simple-port-website.netlify.app/",
   },
