@@ -18,32 +18,34 @@ const about = () => {
           </div>
         </div>
         <div className='about_content'>
-          <div className='about_cards'>
-            <article className='about_card'>
-              <FaAward className='about_icon' />
-              <h5>Experience</h5>
-              <small>2019 - till date</small>
-            </article>
+          <article className='about_card'>
+            <FaAward className='about_icon' />
+            <h5>Experience</h5>
+            <small>Strong Front-End Background</small>
+          </article>
 
-            <article className='about_card'>
-              <FiUsers className='about_icon' />
-              <h5>Clients</h5>
-              <small>Worked With Multiple Clients</small>
-            </article>
+          <article className='about_card'>
+            <FiUsers className='about_icon' />
+            <h5>Clients</h5>
+            <small>Diverse Collaborations</small>
+          </article>
 
-            <article className='about_card'>
-              <VscFolderLibrary className='about_icon' />
-              <h5>Projects</h5>
-              <small>Completed Multiple Projects </small>
-            </article>
-          </div>
+          <article className='about_card'>
+            <VscFolderLibrary className='about_icon' />
+            <h5>Projects</h5>
+            <small>Impactful Websites, Funnels, and Automations</small>
+          </article>
 
           <p>
-            A frontend dev who is able to jump into different roles. Relate well
-            to people of all backgrounds, pick up new skills quickly, and seek
-            every opportunity to make lasting impacts. Good time management
-            skills with a strong capacity to multi-task and prioritize work.
-            Known for my hardworking ethic and exceptional people skills.
+            I'm a software engineer specializing in front-end development and
+            web design. I build SEO-friendly websites using WordPress,
+            Elementor, and WooCommerce, and design high-converting funnels and
+            landing pages with tools like Go High Level. With intermediate PHP
+            skills, I customize WordPress themes and plugins to meet client
+            needs. I also set up automated email sequences, CRM integrations,
+            Google Analytics, conversion tracking, and third-party tools. I
+            focus on page speed, SEO best practices, and resolving technical
+            issues to deliver thoughtful, performance-driven solutions.
           </p>
 
           <a href='#contact' className='btn btn-primary'>
