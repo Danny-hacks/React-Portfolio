@@ -18,34 +18,32 @@ const about = () => {
           </div>
         </div>
         <div className='about_content'>
-          <article className='about_card'>
-            <FaAward className='about_icon' />
-            <h5>Experience</h5>
-            <small>Web Design</small>
-          </article>
+          <div className='about_cards'>
+            <article className='about_card'>
+              <FaAward className='about_icon' />
+              <h5>Experience</h5>
+              <small>2019 - till date</small>
+            </article>
 
-          <article className='about_card'>
-            <FiUsers className='about_icon' />
-            <h5>Clients</h5>
-            <small>Multiple Clients</small>
-          </article>
+            <article className='about_card'>
+              <FiUsers className='about_icon' />
+              <h5>Clients</h5>
+              <small>Worked With Multiple Clients</small>
+            </article>
 
-          <article className='about_card'>
-            <VscFolderLibrary className='about_icon' />
-            <h5>Projects</h5>
-            <small>Various Projects</small>
-          </article>
+            <article className='about_card'>
+              <VscFolderLibrary className='about_icon' />
+              <h5>Projects</h5>
+              <small>Completed Multiple Projects </small>
+            </article>
+          </div>
 
           <p>
-            I'm a software engineer specializing in front-end development and
-            web design. I build SEO-friendly websites using WordPress,
-            Elementor, and WooCommerce, and design high-converting funnels and
-            landing pages with tools like Go High Level. With intermediate PHP
-            skills, I customize WordPress themes and plugins to meet client
-            needs. I also set up automated email sequences, CRM integrations,
-            Google Analytics, conversion tracking, and third-party tools. I
-            focus on page speed, SEO best practices, and resolving technical
-            issues to deliver thoughtful, performance-driven solutions.
+            I'm a front-end developer and web designer specializing in
+            SEO-friendly websites using WordPress, Elementor, and WooCommerce. I
+            build high-converting funnels and landing pages with GoHighLevel,
+            customize themes and plugins with PHP, and handle CRM integrations,
+            automation, tracking, and performance optimization.
           </p>
 
           <a href='#contact' className='btn btn-primary'>
