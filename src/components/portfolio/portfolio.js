@@ -8,6 +8,10 @@ import {
   FaJs,
   FaHtml5,
   FaCss3Alt,
+  FaWordpress, // ✅ WordPress
+  FaElementor, // ✅ Elementor (if available; else use FaTools)
+  FaShopify, // ❌ No WooCommerce icon; Shopify used as close alt
+  FaTools, // ⚙️ Substitute for Thrive Architect or Go HighLevel
 } from "react-icons/fa";
 
 import IMG1 from "../../assets/TaskManagementFIgma.png";
@@ -85,6 +89,11 @@ const techIcons = {
   JavaScript: <FaJs />,
   HTML: <FaHtml5 />,
   CSS: <FaCss3Alt />,
+  WordPress: <FaWordpress />,
+  Elementor: <FaElementor />, // Or fallback to <FaTools />
+  "Thrive Architect": <FaTools />,
+  WooCommerce: <FaShopify />, // Substitute for WooCommerce
+  "Go HighLevel": <FaTools />, // Substitute icon
 };
 
 const ITEMS_PER_PAGE = 6;
@@ -93,10 +102,9 @@ const Portfolio = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = Math.ceil(projects.length / ITEMS_PER_PAGE);
 
-  const displayedProjects = projects.slice(
-    (currentPage - 1) * ITEMS_PER_PAGE,
-    currentPage * ITEMS_PER_PAGE
-  );
+  const displayedProjects = [...projects]
+    .reverse()
+    .slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE);
 
   return (
     <section id='portfolio'>
@@ -115,7 +123,7 @@ const Portfolio = () => {
               <div className='portfolio_tech'>
                 {technologies.map((tech, index) => (
                   <span key={index} className='tech_icon'>
-                    {techIcons[tech]} <small>{tech}</small>
+                    {techIcons[tech] || <FaTools />} <small>{tech}</small>
                   </span>
                 ))}
               </div>
