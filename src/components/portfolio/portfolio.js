@@ -20,7 +20,7 @@ import IMG3 from "../../assets/portfolio1.png";
 import IMG4 from "../../assets/portfolio2.png";
 import IMG5 from "../../assets/portfolio3.PNG";
 import IMG6 from "../../assets/portfolio4.png";
-import IMG7 from "../../assets/portfolio6.png";
+import IMG7 from "../../assets/HMT-Home.png";
 
 const projects = [
   {
@@ -73,14 +73,14 @@ const projects = [
     github: "https://github.com/Danny-hacks/Background-Color-Flipper",
     demo: "https://bvckground-color-flipper.netlify.app",
   },
-  // {
-  //   id: 7,
-  //   image: IMG7,
-  //   title: "Simple Portfolio Website",
-  //   technologies: ["JavaScript", "HTML", "CSS"],
-  //   github: "https://github.com/Danny-hacks/portfolio_task",
-  //   demo: "https://simple-port-website.netlify.app/",
-  // },
+  {
+    id: 7,
+    image: IMG7,
+    title: "Harel Mallac Technologies - Official Website",
+    technologies: ["WordPress", "Thrive Architect"],
+    //    github: "https://harelmallactechnologies.com/",
+    demo: "https://harelmallactechnologies.com/",
+  },
 ];
 
 const techIcons = {
