@@ -70,7 +70,7 @@ header{
   overflow: hidden;
   border-right: 2px solid var(--color-primary);
   white-space: nowrap;
-  animation: typing 3s steps(30, end) infinite, blinkCaret 0.75s step-end infinite;
+  animation: typing 5s steps(20, end) infinite, blinkCaret 0.75s step-end infinite;
 }
 
 @keyframes typing {
