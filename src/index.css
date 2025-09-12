@@ -13,8 +13,8 @@
 :root{
   --body-bg: #0d0d0f;
   --body-bg-variant: #1a1a1d;
-  --color-primary: #840826;
-  --color-primary-variant: rgba(132, 8, 38, 0.5);
+  --color-primary: #44010A;
+  --color-primary-variant: rgba(68, 1, 10, 0.5);
   --color-white: #fff;
   --color-light: rgba(255, 255, 255, 0.6);
 
@@ -46,7 +46,7 @@ body::after {
   width: 600px;
   height: 600px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(132,8,38,0.35), transparent 70%);
+  background: radial-gradient(circle, rgba(68,1,10,0.35), transparent 70%);
   filter: blur(120px);
   animation: floatGlow 20s infinite alternate ease-in-out;
   z-index: -1;
@@ -82,7 +82,7 @@ h1,h2,h3,h4,h5{
 h1{
   font-size: 2.5rem;
   color: var(--color-white);
-  text-shadow: 0 0 15px rgba(132, 8, 38, 0.7);
+  text-shadow: 0 0 15px rgba(68, 1, 10, 0.6);
 }
 
 section{
@@ -97,7 +97,7 @@ section > h2, section > h5{
 section > h2{
   color: var(--color-primary);
   margin-bottom: 3rem;
-  text-shadow: 0 0 10px rgba(132, 8, 38, 0.7);
+  text-shadow: 0 0 10px rgba(68, 1, 10, 0.6);
 }
 
 .text-light{
@@ -113,47 +113,30 @@ a:hover{
   text-shadow: 0 0 8px var(--color-primary);
 }
 
+/* === Gradient Buttons === */
 .btn{
   width: max-content;
   display: inline-block;
-  color: var(--color-white);
   padding: 0.75rem 1.2rem;
-  border-radius: 0.4rem;
+  border-radius: 0.5rem;
   cursor: pointer;
-  border: 1px solid var(--color-primary);
-  background: transparent;
-  transition: var(--transition);
-  position: relative;
-  overflow: hidden;
-}
-
-.btn::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, var(--color-primary) 0%, transparent 70%);
-  opacity: 0;
-  transition: opacity 0.4s;
-}
-
-.btn:hover::before {
-  opacity: 0.2;
+  font-weight: 500;
+  border: none;
+  color: var(--color-white);
+  background: linear-gradient(135deg, var(--color-primary), #6b1220);
+  background-size: 200% 200%;
+  transition: background-position 0.5s ease, transform 0.3s ease;
 }
 
 .btn:hover{
-  background: var(--color-primary);
-  color: var(--body-bg);
-  border-color: transparent;
-  box-shadow: 0 0 20px var(--color-primary);
+  background-position: right center;
+  transform: translateY(-3px);
 }
 
 .btn-primary{
-  background: var(--color-primary);
-  color: var(--body-bg);
-  box-shadow: 0 0 15px rgba(132, 8, 38, 0.6);
+  background: linear-gradient(135deg, var(--color-primary), #8b1e30);
+  background-size: 200% 200%;
+  color: var(--color-white);
 }
 
 img{
@@ -161,7 +144,7 @@ img{
   width: 100%;
   object-fit: cover;
   border-radius: 0.3rem;
-  box-shadow: 0 0 20px rgba(132, 8, 38, 0.2);
+  box-shadow: 0 0 20px rgba(68, 1, 10, 0.2);
 }
 
 /* MEDIA QUERIES (MEDIUM DEVICES) */
