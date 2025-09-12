@@ -1,10 +1,11 @@
 import React from "react";
 import ME from "../../assets/me-about.jpg";
 import "./about.css";
+import { FaLaptopCode, FaLightbulb, FaUsers, FaBolt } from "react-icons/fa";
 
 const About = () => {
   const profileData = {
-    title: "Full Stack Developer",
+    title: "Web Developer",
     subtitle: "Crafting Digital Experiences",
     description: `I'm a passionate web developer and designer specializing in creating 
                  SEO-friendly websites using modern technologies. I build high-converting funnels 
@@ -15,7 +16,7 @@ const About = () => {
   const techStack = [
     {
       title: "Frontend",
-      skills: ["React", "Html", "Css", "Javascript"],
+      skills: ["React", "HTML", "CSS", "JavaScript"],
     },
     {
       title: "Backend",
@@ -25,25 +26,38 @@ const About = () => {
       title: "Tools & CMS",
       skills: ["WordPress", "Elementor", "WooCommerce", "GoHighLevel"],
     },
+    {
+      title: "IT Support",
+      skills: [
+        "Troubleshooting",
+        "Network Setup",
+        "Hardware Maintenance",
+        "System Security",
+      ],
+    },
   ];
 
   const softSkills = [
     {
+      icon: <FaLaptopCode className='soft_skill_icon' />,
       title: "Clean Code",
       description:
-        "Writing maintainable, scalable code that stands the test of time",
+        "Writing maintainable and scalable code that stands the test of time",
     },
     {
+      icon: <FaLightbulb className='soft_skill_icon' />,
       title: "Problem Solver",
       description:
-        "Approaching complex challenges with creative and efficient solutions",
+        "Solving complex challenges with creative and efficient solutions",
     },
     {
+      icon: <FaUsers className='soft_skill_icon' />,
       title: "Team Player",
       description:
         "Collaborating effectively with designers, developers, and stakeholders",
     },
     {
+      icon: <FaBolt className='soft_skill_icon' />,
       title: "Fast Learner",
       description:
         "Quickly adapting to new technologies and industry best practices",
@@ -75,41 +89,46 @@ const About = () => {
           </div>
 
           <p className='about_description'>{profileData.description}</p>
+        </div>
+      </div>
 
-          {/* Tech Stack Section */}
-          <h3 className='section_header'>Technology Stack</h3>
-          <div className='skills_grid'>
-            {techStack.map((category, index) => (
-              <div key={index} className='skill_category'>
-                <h4 className='skill_category_title'>{category.title}</h4>
-                <div className='skill_list'>
-                  {category.skills.map((skill, skillIndex) => (
-                    <span key={skillIndex} className='skill_tag'>
-                      {skill}
-                    </span>
-                  ))}
-                </div>
+      {/* Technology Stack Section */}
+      <div className='container tech_stack_section'>
+        <h3 className='section_header'>Technology Stack & IT Support</h3>
+        <div className='skills_grid'>
+          {techStack.map((category, index) => (
+            <div key={index} className='skill_category'>
+              <h4 className='skill_category_title'>{category.title}</h4>
+              <div className='skill_list'>
+                {category.skills.map((skill, skillIndex) => (
+                  <span key={skillIndex} className='skill_tag'>
+                    {skill}
+                  </span>
+                ))}
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
+        </div>
+      </div>
 
-          {/* Soft Skills Section */}
-          <h3 className='section_header'>Soft Skills</h3>
-          <div className='soft_skills_grid'>
-            {softSkills.map((skill, index) => (
-              <div key={index} className='soft_skill_card'>
-                <h4 className='soft_skill_title'>{skill.title}</h4>
-                <p className='soft_skill_desc'>{skill.description}</p>
-              </div>
-            ))}
-          </div>
+      {/* Soft Skills Section */}
+      <div className='container soft_skills_section'>
+        <h3 className='section_header'>Soft Skills</h3>
+        <div className='soft_skills_grid'>
+          {softSkills.map((skill, index) => (
+            <div key={index} className='soft_skill_card'>
+              <div className='soft_skill_icon_wrapper'>{skill.icon}</div>
+              <h4 className='soft_skill_title'>{skill.title}</h4>
+              <p className='soft_skill_desc'>{skill.description}</p>
+            </div>
+          ))}
+        </div>
 
-          {/* CTA Button */}
-          <div className='about_cta'>
-            <a href='#portfolio' className='cta_primary'>
-              View Projects
-            </a>
-          </div>
+        {/* CTA Button */}
+        <div className='about_cta'>
+          <a href='#portfolio' className='cta_primary'>
+            View Projects
+          </a>
         </div>
       </div>
     </section>

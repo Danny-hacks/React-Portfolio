@@ -110,4 +110,9 @@ header{
 @media screen and (max-width:600px) {
     header { height: 105vh; }
     .header_socials, .scroll_down{ display: none; }
+    @keyframes typing {
+        0% { width: 0; }
+        50% { width: 100%; }
+        100% { width: 0; }
+      }
 }

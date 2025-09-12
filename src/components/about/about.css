@@ -1,3 +1,4 @@
+/* About Container */
 .about_container {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
@@ -15,7 +16,8 @@
   .about_image_wrapper {
     width: 100%;
     max-width: 350px;
-    aspect-ratio: 1/1;
+    aspect-ratio: auto;
+    height: 400px;
   }
   
   .about_image_container {
@@ -94,6 +96,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
+    margin-bottom: 2rem;
   }
   
   .skill_category {
@@ -136,7 +139,7 @@
   /* Soft Skills Grid */
   .soft_skills_grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1.5rem;
   }
   
@@ -147,6 +150,10 @@
     padding: 1.5rem;
     text-align: center;
     transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
   }
   
   .soft_skill_card:hover {
@@ -154,11 +161,15 @@
     border-color: var(--color-primary-variant);
   }
   
+  .soft_skill_icon_wrapper {
+    font-size: 2rem;
+    color: var(--color-primary);
+  }
+  
   .soft_skill_title {
     font-weight: 600;
     font-size: 1rem;
     color: var(--color-primary);
-    margin-bottom: 0.5rem;
   }
   
   .soft_skill_desc {
@@ -167,11 +178,11 @@
     line-height: 1.5;
   }
   
-  /* CTA Section */
+  /* CTA Button */
   .about_cta {
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
   }
   
   .cta_primary {
@@ -214,11 +225,15 @@
       grid-template-columns: 1fr;
       gap: 3rem;
     }
+  
     .about_image_wrapper {
       max-width: 280px;
       margin: 0 auto;
+      height: 350px;
     }
-    .skills_grid, .soft_skills_grid {
+  
+    .skills_grid,
+    .soft_skills_grid {
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 1rem;
     }
@@ -228,8 +243,10 @@
     .about_container {
       gap: 2rem;
     }
+  
     .about_image_wrapper {
       max-width: 250px;
+      height: 300px;
     }
   }
   
