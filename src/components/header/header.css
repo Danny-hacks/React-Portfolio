@@ -75,7 +75,7 @@ header{
 
 @keyframes typing {
   0% { width: 0; }
-  50% { width: 80%; }
+  50% { width: 50%; }
   100% { width: 0; }
 }
 
