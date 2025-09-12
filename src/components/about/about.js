@@ -18,7 +18,7 @@ const About = () => {
       icon: <FaUsers className='soft_skill_icon' />,
       title: "Team Player",
       description:
-        "Working closely with cross-functional teams to build and ship successful products.",
+        "Collaborating with cross-functional teams to build successful products.",
     },
     {
       icon: <FaBolt className='soft_skill_icon' />,

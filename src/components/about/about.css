@@ -28,7 +28,7 @@
     background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
     padding: 0.5rem;
     overflow: hidden;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .about_me-image {
