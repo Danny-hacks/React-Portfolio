@@ -89,6 +89,17 @@ const About = () => {
           </div>
 
           <p className='about_description'>{profileData.description}</p>
+
+          {/* Soft Skills Boxes directly under the summary */}
+          <div className='soft_skills_grid'>
+            {softSkills.map((skill, index) => (
+              <div key={index} className='soft_skill_card'>
+                <div className='soft_skill_icon_wrapper'>{skill.icon}</div>
+                <h4 className='soft_skill_title'>{skill.title}</h4>
+                <p className='soft_skill_desc'>{skill.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -106,20 +117,6 @@ const About = () => {
                   </span>
                 ))}
               </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Soft Skills Section */}
-      <div className='container soft_skills_section'>
-        <h3 className='section_header'>Soft Skills</h3>
-        <div className='soft_skills_grid'>
-          {softSkills.map((skill, index) => (
-            <div key={index} className='soft_skill_card'>
-              <div className='soft_skill_icon_wrapper'>{skill.icon}</div>
-              <h4 className='soft_skill_title'>{skill.title}</h4>
-              <p className='soft_skill_desc'>{skill.description}</p>
             </div>
           ))}
         </div>
