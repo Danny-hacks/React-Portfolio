@@ -367,16 +367,16 @@ img {
 }
 
 /* Reduced Motion */
-@media (prefers-reduced-motion: reduce) {
+/* @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-}
+} */
 
 /* High Contrast Mode */
-@media (prefers-contrast: high) {
+/* @media (prefers-contrast: high) {
   :root {
     --color-primary: #b02831;
     --color-light: #ffffff;
@@ -384,7 +384,7 @@ img {
     --body-bg: #000000;
     --surface: #1a1a1a;
   }
-}
+} */
 
 /* Floating glow animation utility class */
 .floating-glow {
