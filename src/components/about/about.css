@@ -10,7 +10,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
   }
   
   .about_image_wrapper {
@@ -26,7 +25,6 @@
     background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
     padding: 0.5rem;
     overflow: hidden;
-    position: relative;
   }
   
   .about_me-image {
@@ -47,69 +45,6 @@
   .about_me-image:hover img {
     transform: scale(1.05);
     filter: grayscale(0%);
-  }
-  
-  /* Stats Cards */
-  .about_stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    width: 100%;
-    margin-top: 2rem;
-  }
-  
-  .stat_card {
-    background: var(--surface);
-    border: 1px solid var(--surface-variant);
-    border-radius: var(--border-radius-lg);
-    padding: 1.5rem 1rem;
-    text-align: center;
-    transition: var(--transition);
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .stat_card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
-    transform: scaleX(0);
-    transition: var(--transition);
-  }
-  
-  .stat_card:hover::before {
-    transform: scaleX(1);
-  }
-  
-  .stat_card:hover {
-    transform: translateY(-5px);
-    border-color: var(--color-primary-variant);
-    box-shadow: var(--shadow-lg);
-  }
-  
-  .stat_icon {
-    color: var(--color-primary);
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-    display: block;
-  }
-  
-  .stat_number {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--color-white);
-    margin-bottom: 0.25rem;
-  }
-  
-  .stat_label {
-    font-size: 0.75rem;
-    color: var(--color-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
   }
   
   /* Content Section */
@@ -145,12 +80,20 @@
     margin: 0;
   }
   
-  /* Skills Grid */
+  /* Section Headers */
+  .section_header {
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Tech Skills Grid */
   .skills_grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
-    margin: 2rem 0;
   }
   
   .skill_category {
@@ -190,11 +133,45 @@
     font-weight: 500;
   }
   
+  /* Soft Skills Grid */
+  .soft_skills_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .soft_skill_card {
+    background: var(--surface);
+    border: 1px solid var(--surface-variant);
+    border-radius: var(--border-radius-lg);
+    padding: 1.5rem;
+    text-align: center;
+    transition: var(--transition);
+  }
+  
+  .soft_skill_card:hover {
+    transform: translateY(-3px);
+    border-color: var(--color-primary-variant);
+  }
+  
+  .soft_skill_title {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+  }
+  
+  .soft_skill_desc {
+    font-size: 0.875rem;
+    color: var(--color-light);
+    line-height: 1.5;
+  }
+  
   /* CTA Section */
   .about_cta {
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
   
   .cta_primary {
@@ -239,11 +216,9 @@
     }
     .about_image_wrapper {
       max-width: 280px;
+      margin: 0 auto;
     }
-    .about_stats {
-      grid-template-columns: repeat(3, 1fr);
-    }
-    .skills_grid {
+    .skills_grid, .soft_skills_grid {
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 1rem;
     }
@@ -256,27 +231,11 @@
     .about_image_wrapper {
       max-width: 250px;
     }
-    .about_stats {
-      grid-template-columns: 1fr 1fr;
-      gap: 0.75rem;
-    }
-    .stat_card {
-      padding: 1rem 0.75rem;
-    }
-    .skills_grid {
-      grid-template-columns: 1fr;
-    }
   }
   
   @media screen and (max-width: 600px) {
-    .about_stats {
-      grid-template-columns: 1fr;
-    }
     .about_content {
       text-align: center;
-    }
-    .about_cta {
-      align-items: center;
     }
   }
   

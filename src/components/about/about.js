@@ -1,50 +1,52 @@
 import React from "react";
 import ME from "../../assets/me-about.jpg";
 import "./about.css";
-import { FaAward } from "react-icons/fa";
-import { FiUsers } from "react-icons/fi";
-import { VscFolderLibrary } from "react-icons/vsc";
 
 const About = () => {
   const profileData = {
     title: "Full Stack Developer",
     subtitle: "Crafting Digital Experiences",
-    description: `I'm a passionate full-stack developer and web designer specializing in creating 
+    description: `I'm a passionate web developer and designer specializing in creating 
                  SEO-friendly websites using modern technologies. I build high-converting funnels 
                  and landing pages, customize themes and plugins, and handle CRM integrations, 
                  automation, tracking, and performance optimization to deliver exceptional digital experiences.`,
   };
 
-  const stats = [
-    {
-      icon: <FaAward className='stat_icon' />,
-      number: "5+",
-      label: "Years Experience",
-    },
-    {
-      icon: <FiUsers className='stat_icon' />,
-      number: "50+",
-      label: "Happy Clients",
-    },
-    {
-      icon: <VscFolderLibrary className='stat_icon' />,
-      number: "100+",
-      label: "Projects Completed",
-    },
-  ];
-
-  const skillCategories = [
+  const techStack = [
     {
       title: "Frontend",
-      skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "SASS"],
+      skills: ["React", "Html", "Css", "Javascript"],
     },
     {
       title: "Backend",
-      skills: ["Node.js", "PHP", "Python", "MongoDB", "MySQL"],
+      skills: ["Node.js", "PHP", "Python", "MySQL"],
     },
     {
       title: "Tools & CMS",
       skills: ["WordPress", "Elementor", "WooCommerce", "GoHighLevel"],
+    },
+  ];
+
+  const softSkills = [
+    {
+      title: "Clean Code",
+      description:
+        "Writing maintainable, scalable code that stands the test of time",
+    },
+    {
+      title: "Problem Solver",
+      description:
+        "Approaching complex challenges with creative and efficient solutions",
+    },
+    {
+      title: "Team Player",
+      description:
+        "Collaborating effectively with designers, developers, and stakeholders",
+    },
+    {
+      title: "Fast Learner",
+      description:
+        "Quickly adapting to new technologies and industry best practices",
     },
   ];
 
@@ -63,17 +65,6 @@ const About = () => {
               </div>
             </div>
           </div>
-
-          {/* Stats Cards */}
-          <div className='about_stats'>
-            {stats.map((stat, index) => (
-              <article key={index} className='stat_card'>
-                {stat.icon}
-                <div className='stat_number'>{stat.number}</div>
-                <div className='stat_label'>{stat.label}</div>
-              </article>
-            ))}
-          </div>
         </div>
 
         {/* Content Section */}
@@ -85,9 +76,10 @@ const About = () => {
 
           <p className='about_description'>{profileData.description}</p>
 
-          {/* Skills Grid */}
+          {/* Tech Stack Section */}
+          <h3 className='section_header'>Technology Stack</h3>
           <div className='skills_grid'>
-            {skillCategories.map((category, index) => (
+            {techStack.map((category, index) => (
               <div key={index} className='skill_category'>
                 <h4 className='skill_category_title'>{category.title}</h4>
                 <div className='skill_list'>
@@ -101,7 +93,18 @@ const About = () => {
             ))}
           </div>
 
-          {/* Single CTA Button */}
+          {/* Soft Skills Section */}
+          <h3 className='section_header'>Soft Skills</h3>
+          <div className='soft_skills_grid'>
+            {softSkills.map((skill, index) => (
+              <div key={index} className='soft_skill_card'>
+                <h4 className='soft_skill_title'>{skill.title}</h4>
+                <p className='soft_skill_desc'>{skill.description}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA Button */}
           <div className='about_cta'>
             <a href='#portfolio' className='cta_primary'>
               View Projects
