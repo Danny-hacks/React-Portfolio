@@ -3,10 +3,90 @@ header{
     padding-top: 7rem;
     overflow: hidden;
 }
+
 .header_container{
     text-align: center;
     height: 100%;
     position: relative;
+}
+
+/* TYPEWRITER ANIMATIONS */
+.typewriter-line {
+    opacity: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid var(--color-primary);
+    margin: 0 auto;
+    animation: blink-cursor 1s infinite;
+}
+
+.typewriter-line.typing {
+    animation: typewriter var(--typing-duration) steps(var(--char-count), end) forwards,
+               blink-cursor 1s infinite;
+}
+
+.typewriter-line.finished {
+    border-right: none;
+    animation: none;
+}
+
+/* Typewriter animation keyframes */
+@keyframes typewriter {
+    0% {
+        width: 0;
+        opacity: 1;
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+@keyframes blink-cursor {
+    0%, 50% {
+        border-color: var(--color-primary);
+    }
+    51%, 100% {
+        border-color: transparent;
+    }
+}
+
+/* Fade in animations for other elements */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Individual timing for each line */
+.greeting {
+    --char-count: 10; /* "Hello, I'm" = 10 characters */
+    --typing-duration: 1.5s;
+    animation-delay: 0.5s;
+}
+
+.name {
+    --char-count: 15; /* "Daniel Obiefule" = 15 characters */
+    --typing-duration: 2s;
+    animation-delay: 2.5s; /* Start after greeting finishes */
+    margin-top: 0.5rem;
+}
+
+.title {
+    --char-count: 32; /* "Software Engineer - Web Developer" = 32 characters */
+    --typing-duration: 2.8s;
+    animation-delay: 5s; /* Start after name finishes */
+    margin-top: 0.5rem;
 }
 
 /* CTA */
@@ -15,6 +95,9 @@ header{
     display: flex;
     gap: 1.2rem;
     justify-content: center;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: 8.5s; /* Appear after all typing is done */
 }
 
 /* HEADER SOCIALS */
@@ -26,12 +109,42 @@ header{
     position: absolute;
     left: 0;
     bottom: 3rem;
+    opacity: 0;
+    animation: slideInLeft 0.8s ease-out forwards;
+    animation-delay: 9s;
 }
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 .header_socials::after{
     content: "";
     width: 1px;
     height: 2rem;
     background: var(--color-primary);
+}
+
+.header_socials a {
+    color: var(--color-light);
+    font-size: 1.2rem;
+    transition: var(--transition);
+    display: block;
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+
+.header_socials a:hover {
+    color: var(--color-primary);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(202, 62, 71, 0.3);
 }
 
 /* ME */
@@ -40,17 +153,32 @@ header{
    width: 18.5rem;
    height: 30rem;
    position: absolute; 
-   left: calc(50% - 8.5rem);
+   left: calc(50% - 9.25rem);
    margin-top: 4rem;
    border-radius: 12rem 12rem 0 0;
    overflow: hidden;
-   transition: transform 0.6s ease;
+   opacity: 0;
+   animation: scaleIn 1s ease-out forwards;
+   animation-delay: 8s;
 }
-.me img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 12rem 12rem 0 0;
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.me img {
+    transition: var(--transition);
+}
+
+.me:hover img {
+    transform: scale(1.05);
 }
 
 /* SCROLL TO BOTTOM */
@@ -61,53 +189,95 @@ header{
     transform: rotate(90deg);
     font-weight: 300;
     font-size: 0.9rem;
-    animation: floatArrow 2s ease-in-out infinite;
-}
-
-/* Typewriter effect */
-.typewriter {
-  display: inline-block;
-  overflow: hidden;
-  border-right: 2px solid var(--color-primary);
-  white-space: nowrap;
-  animation: typing 3s steps(30, end) infinite, blinkCaret 0.75s step-end infinite;
-}
-
-@keyframes typing {
-  0% { width: 0; }
-  50% { width: 100%; }
-  100% { width: 0; }
-}
-
-@keyframes blinkCaret {
-  0%, 50%, 100% { border-color: var(--color-primary); }
-  25%, 75% { border-color: transparent; }
-}
-
-/* Floating arrow animation */
-@keyframes floatArrow {
-  0%, 100% { transform: rotate(90deg) translateY(0); }
-  50% { transform: rotate(90deg) translateY(-10px); }
-}
-
-/* Fade-in animation for name */
-.fade-in {
-    animation: fadeInUp 1s ease-out forwards;
+    color: var(--color-muted);
     opacity: 0;
+    animation: slideInRight 0.8s ease-out forwards;
+    animation-delay: 9.5s;
+    transition: var(--transition);
 }
 
-@keyframes fadeInUp {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: rotate(90deg) translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(90deg) translateX(0);
+    }
+}
+
+.scroll_down:hover {
+    color: var(--color-primary);
+}
+
+/* Pulse animation for extra emphasis */
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(202, 62, 71, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(202, 62, 71, 0);
+    }
+}
+
+.pulse-animation {
+    animation: pulse 2s infinite;
 }
 
 /* MEDIA QUERIES (MEDIUM DEVICES) */
 @media screen and (max-width:1024px) {
-    header{ height: 100vh; }
+    header{
+        height: 100vh;
+    }
+    
+    .me{
+        left: calc(50% - 9.25rem);
+    }
 }
 
 /* MEDIA QUERIES (SMALL DEVICES) */
 @media screen and (max-width:600px) {
-    header { height: 105vh; }
-    .header_socials, .scroll_down{ display: none; }
+    header {
+        height: 105vh;
+    }
+    
+    .header_socials, .scroll_down{
+        display: none;
+    }
+    
+    .me{
+        width: 16rem;
+        height: 25rem;
+        left: calc(50% - 8rem);
+        margin-top: 3rem;
+    }
+    
+    .cta {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* Adjust typewriter for mobile */
+    .greeting {
+        --typing-duration: 1.2s;
+    }
+    
+    .name {
+        --typing-duration: 1.8s;
+        animation-delay: 2.2s;
+    }
+    
+    .title {
+        --typing-duration: 2.5s;
+        animation-delay: 4.5s;
+    }
+    
+    .cta {
+        animation-delay: 7.5s;
+    }
+    
+    .me {
+        animation-delay: 7s;
+    }
 }
