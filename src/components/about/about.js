@@ -13,30 +13,6 @@ const About = () => {
                  automation, tracking, and performance optimization to deliver exceptional digital experiences.`,
   };
 
-  const techStack = [
-    {
-      title: "Frontend",
-      skills: ["React", "HTML", "CSS", "JavaScript"],
-    },
-    {
-      title: "Backend",
-      skills: ["Node.js", "PHP", "Python", "MySQL"],
-    },
-    {
-      title: "Tools & CMS",
-      skills: ["WordPress", "Elementor", "WooCommerce", "GoHighLevel"],
-    },
-    {
-      title: "IT Support",
-      skills: [
-        "Troubleshooting",
-        "Network Setup",
-        "Hardware Maintenance",
-        "System Security",
-      ],
-    },
-  ];
-
   const softSkills = [
     {
       icon: <FaLaptopCode className='soft_skill_icon' />,
@@ -90,7 +66,7 @@ const About = () => {
 
           <p className='about_description'>{profileData.description}</p>
 
-          {/* Soft Skills Boxes directly under the summary */}
+          {/* Soft Skills Grid */}
           <div className='soft_skills_grid'>
             {softSkills.map((skill, index) => (
               <div key={index} className='soft_skill_card'>
@@ -100,32 +76,13 @@ const About = () => {
               </div>
             ))}
           </div>
-        </div>
-      </div>
 
-      {/* Technology Stack Section */}
-      <div className='container tech_stack_section'>
-        <h3 className='section_header'>Technology Stack & IT Support</h3>
-        <div className='skills_grid'>
-          {techStack.map((category, index) => (
-            <div key={index} className='skill_category'>
-              <h4 className='skill_category_title'>{category.title}</h4>
-              <div className='skill_list'>
-                {category.skills.map((skill, skillIndex) => (
-                  <span key={skillIndex} className='skill_tag'>
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* CTA Button */}
-        <div className='about_cta'>
-          <a href='#portfolio' className='cta_primary'>
-            View Projects
-          </a>
+          {/* CTA Button */}
+          <div className='about_cta'>
+            <a href='#portfolio' className='cta_primary'>
+              View Projects
+            </a>
+          </div>
         </div>
       </div>
     </section>
