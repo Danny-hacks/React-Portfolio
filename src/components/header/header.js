@@ -1,67 +1,46 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./header.css";
 import Cta from "./CTA";
 import Me from "../../assets/me.jpg";
 import HeaderSocials from "./headerSocials";
 
 const Header = () => {
-  const [greetingVisible, setGreetingVisible] = useState(false);
-  const [nameVisible, setNameVisible] = useState(false);
-  const [titleVisible, setTitleVisible] = useState(false);
-  const [greetingFinished, setGreetingFinished] = useState(false);
-  const [nameFinished, setNameFinished] = useState(false);
+  const lines = [
+    "Hello, I'm",
+    "Daniel Obiefule",
+    "Software Engineer - Web Developer",
+  ];
+  const [currentText, setCurrentText] = useState(["", "", ""]);
+  const [lineIndex, setLineIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
 
   useEffect(() => {
-    // Start greeting animation after initial delay
-    const greetingTimer = setTimeout(() => {
-      setGreetingVisible(true);
-    }, 500);
-
-    // Start name animation after greeting
-    const nameTimer = setTimeout(() => {
-      setGreetingFinished(true);
-      setNameVisible(true);
-    }, 2500);
-
-    // Start title animation after name
-    const titleTimer = setTimeout(() => {
-      setNameFinished(true);
-      setTitleVisible(true);
-    }, 5000);
-
-    return () => {
-      clearTimeout(greetingTimer);
-      clearTimeout(nameTimer);
-      clearTimeout(titleTimer);
-    };
-  }, []);
+    if (lineIndex < lines.length) {
+      if (charIndex < lines[lineIndex].length) {
+        const timeout = setTimeout(() => {
+          const updatedText = [...currentText];
+          updatedText[lineIndex] += lines[lineIndex][charIndex];
+          setCurrentText(updatedText);
+          setCharIndex(charIndex + 1);
+        }, 120); // typing speed
+        return () => clearTimeout(timeout);
+      } else {
+        // pause before typing next line
+        const pause = setTimeout(() => {
+          setLineIndex(lineIndex + 1);
+          setCharIndex(0);
+        }, 700); // pause after line finished
+        return () => clearTimeout(pause);
+      }
+    }
+  }, [charIndex, lineIndex, lines, currentText]);
 
   return (
     <header>
       <div className='container header_container'>
-        <h5
-          className={`typewriter-line greeting ${
-            greetingVisible ? "typing" : ""
-          } ${greetingFinished ? "finished" : ""}`}
-        >
-          Hello, I'm
-        </h5>
-
-        <h1
-          className={`typewriter-line name ${nameVisible ? "typing" : ""} ${
-            nameFinished ? "finished" : ""
-          }`}
-        >
-          Daniel Obiefule
-        </h1>
-
-        <h5
-          className={`text-light typewriter-line title ${
-            titleVisible ? "typing" : ""
-          }`}
-        >
-          Software Engineer - Web Developer
-        </h5>
+        <h5 className='typewriter'>{currentText[0]}</h5>
+        <h1 className='typewriter'>{currentText[1]}</h1>
+        <h5 className='text-light typewriter'>{currentText[2]}</h5>
 
         <Cta />
         <HeaderSocials />

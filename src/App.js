@@ -35,7 +35,9 @@ const App = () => {
       <div data-aos='fade-up'>
         <Contact />
       </div>
-      {/* <div data-aos="fade-up"><Footer/></div> */}
+      <div data-aos='fade-up'>
+        <Footer />
+      </div>
     </>
   );
 };
