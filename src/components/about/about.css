@@ -17,7 +17,7 @@
 
 .about_image_wrapper {
     width: 100%;
-    max-width: 350px;
+    max-width: 400px;
     height: 450px;
 }
 
@@ -35,6 +35,7 @@
     height: 100%;
     border-radius: 1.5rem;
     overflow: hidden;
+    margin-top: 20px;
 }
 
 .about_me-image img {
@@ -127,46 +128,6 @@
     line-height: 1.5;
 }
 
-/* CTA Button */
-.about_cta {
-    display: flex;
-    justify-content: center;
-    margin-top: 2.5rem;
-}
-
-.cta_primary {
-    background: var(--color-primary);
-    color: var(--color-white);
-    border: 1px solid var(--color-primary);
-    padding: 0.875rem 2rem;
-    border-radius: var(--border-radius);
-    font-weight: 500;
-    text-decoration: none;
-    transition: var(--transition);
-    position: relative;
-    overflow: hidden;
-}
-
-.cta_primary::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-    transition: left 0.6s;
-}
-
-.cta_primary:hover::before {
-    left: 100%;
-}
-
-.cta_primary:hover {
-    background: var(--color-primary-hover);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
-}
 
 /* Responsive Design */
 @media screen and (max-width: 1024px) {

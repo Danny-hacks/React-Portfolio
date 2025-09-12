@@ -64,13 +64,6 @@ const About = () => {
               </div>
             ))}
           </div>
-
-          {/* CTA Button */}
-          <div className='about_cta'>
-            <a href='#portfolio' className='cta_primary'>
-              View Projects
-            </a>
-          </div>
         </div>
       </div>
     </section>
