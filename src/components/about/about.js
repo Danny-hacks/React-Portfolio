@@ -1,13 +1,11 @@
 import React from "react";
 import ME from "../../assets/me-about.jpg";
 import "./about.css";
-import { FaAward, FaCode, FaRocket } from "react-icons/fa";
-import { FiUsers, FiTrendingUp } from "react-icons/fi";
+import { FaAward } from "react-icons/fa";
+import { FiUsers } from "react-icons/fi";
 import { VscFolderLibrary } from "react-icons/vsc";
-import { HiOutlineLocationMarker } from "react-icons/hi";
 
 const About = () => {
-  // Easy to update data structure
   const profileData = {
     title: "Full Stack Developer",
     subtitle: "Crafting Digital Experiences",
@@ -50,17 +48,6 @@ const About = () => {
     },
   ];
 
-  const floatingElements = [
-    {
-      icon: <HiOutlineLocationMarker className='floating_element_icon' />,
-      text: "Based in Nigeria",
-    },
-    {
-      icon: <FiTrendingUp className='floating_element_icon' />,
-      text: "Always Learning",
-    },
-  ];
-
   return (
     <section id='about'>
       <h5>Get To Know</h5>
@@ -75,21 +62,6 @@ const About = () => {
                 <img src={ME} alt='Daniel Obiefule' />
               </div>
             </div>
-
-            {/* Floating Elements */}
-            {floatingElements.map((element, index) => (
-              <div
-                key={index}
-                className={`about_floating_element floating_element_${
-                  index + 1
-                }`}
-              >
-                <div className='floating_element_content'>
-                  {element.icon}
-                  <span>{element.text}</span>
-                </div>
-              </div>
-            ))}
           </div>
 
           {/* Stats Cards */}
@@ -129,13 +101,10 @@ const About = () => {
             ))}
           </div>
 
-          {/* CTA Buttons */}
+          {/* Single CTA Button */}
           <div className='about_cta'>
-            <a href='#contact' className='cta_primary'>
-              Let's Work Together
-            </a>
-            <a href='#portfolio' className='cta_secondary'>
-              View My Work
+            <a href='#portfolio' className='cta_primary'>
+              View Projects
             </a>
           </div>
         </div>
