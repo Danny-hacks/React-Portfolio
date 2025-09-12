@@ -476,7 +476,7 @@ img {
 /* High Contrast Mode */
 @media (prefers-contrast: high) {
   :root {
-    --color-primary: #7c3aed;
+    --color-primary: #CA3E47;
     --color-light: #ffffff;
     --color-muted: #d1d5db;
     --body-bg: #000000;
