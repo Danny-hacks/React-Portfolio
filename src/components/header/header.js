@@ -3,14 +3,17 @@ import "./header.css";
 import Cta from "./CTA";
 import Me from "../../assets/me.jpg";
 import HeaderSocials from "./headerSocials";
+import Typewriter from "./Typewriter";
 
-const header = () => {
+const Header = () => {
   return (
     <header>
       <div className='container header_container'>
         <h5>Hello, I'm</h5>
-        <h1>Daniel Obiefule</h1>
-        <h5 className='text-light'>Software Engineer - Web Developer</h5>
+        <h1 className='fade-in'>Daniel Obiefule</h1>
+        <h5 className='text-light'>
+          <Typewriter text='Software Engineer - Web Developer' />
+        </h5>
         <Cta />
         <HeaderSocials />
 
@@ -26,4 +29,4 @@ const header = () => {
   );
 };
 
-export default header;
+export default Header;

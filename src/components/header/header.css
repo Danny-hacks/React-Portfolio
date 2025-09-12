@@ -9,7 +9,6 @@ header{
     position: relative;
 }
 
-
 /* CTA */
 .cta{
     margin-top: 2.5rem;
@@ -17,7 +16,6 @@ header{
     gap: 1.2rem;
     justify-content: center;
 }
-
 
 /* HEADER SOCIALS */
 .header_socials{
@@ -36,7 +34,6 @@ header{
     background: var(--color-primary);
 }
 
-
 /* ME */
 .me{
    background: linear-gradient(var(--color-primary), transparent);
@@ -47,11 +44,16 @@ header{
    margin-top: 4rem;
    border-radius: 12rem 12rem 0 0;
    overflow: hidden;
-   /* padding-right: 1rem; */
+   transition: transform 0.6s ease;
+}
+.me img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12rem 12rem 0 0;
 }
 
-
-/* SCROLL TO BUTTOM */
+/* SCROLL TO BOTTOM */
 .scroll_down{
     position: absolute;
     right: -2.3rem;
@@ -59,21 +61,53 @@ header{
     transform: rotate(90deg);
     font-weight: 300;
     font-size: 0.9rem;
+    animation: floatArrow 2s ease-in-out infinite;
+}
+
+/* Typewriter effect */
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 2px solid var(--color-primary);
+  white-space: nowrap;
+  animation: typing 3s steps(30, end) infinite, blinkCaret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  0% { width: 0; }
+  50% { width: 100%; }
+  100% { width: 0; }
+}
+
+@keyframes blinkCaret {
+  0%, 50%, 100% { border-color: var(--color-primary); }
+  25%, 75% { border-color: transparent; }
+}
+
+/* Floating arrow animation */
+@keyframes floatArrow {
+  0%, 100% { transform: rotate(90deg) translateY(0); }
+  50% { transform: rotate(90deg) translateY(-10px); }
+}
+
+/* Fade-in animation for name */
+.fade-in {
+    animation: fadeInUp 1s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
 /* MEDIA QUERIES (MEDIUM DEVICES) */
 @media screen and (max-width:1024px) {
-    header{
-        height: 100vh;
-    }
+    header{ height: 100vh; }
 }
 
 /* MEDIA QUERIES (SMALL DEVICES) */
 @media screen and (max-width:600px) {
-    header {
-            height: 105vh;
-        }
-    .header_socials, .scroll_down{
-        display: none;
-    }
+    header { height: 105vh; }
+    .header_socials, .scroll_down{ display: none; }
 }
