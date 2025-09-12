@@ -19,9 +19,9 @@
   --surface-variant: #2d3748;
   
   /* Primary Colors */
-  --color-primary: #b02831;
+  --color-primary: #6366f1;
   --color-primary-variant: rgba(99, 102, 241, 0.15);
-  --color-primary-hover: #96171f;
+  --color-primary-hover: #4f46e5;
   --color-accent: #f59e0b;
   --color-accent-variant: rgba(245, 158, 11, 0.15);
   
@@ -476,10 +476,15 @@ img {
 /* High Contrast Mode */
 @media (prefers-contrast: high) {
   :root {
-    --color-primary: #CA3E47;
+    --color-primary: #b02831;
     --color-light: #ffffff;
     --color-muted: #d1d5db;
     --body-bg: #000000;
     --surface: #1a1a1a;
   }
+}
+
+/* Floating glow animation utility class */
+.floating-glow {
+  animation: floatGlow 4s ease-in-out infinite;
 }
