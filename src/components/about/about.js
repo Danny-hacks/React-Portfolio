@@ -15,22 +15,10 @@ const About = () => {
 
   const softSkills = [
     {
-      icon: <FaLaptopCode className='soft_skill_icon' />,
-      title: "Clean Code",
-      description:
-        "Writing maintainable and scalable code that stands the test of time",
-    },
-    {
-      icon: <FaLightbulb className='soft_skill_icon' />,
-      title: "Problem Solver",
-      description:
-        "Solving complex challenges with creative and efficient solutions",
-    },
-    {
       icon: <FaUsers className='soft_skill_icon' />,
       title: "Team Player",
       description:
-        "Collaborating effectively with designers, developers, and stakeholders",
+        "Working closely with cross-functional teams to build and ship successful products.",
     },
     {
       icon: <FaBolt className='soft_skill_icon' />,
