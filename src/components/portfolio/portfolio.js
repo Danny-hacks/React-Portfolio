@@ -170,7 +170,7 @@ const Portfolio = () => {
 
         {/* CMS Projects */}
         <div className='portfolio_category'>
-          <h3 className='text-primary'>CMS / Live Projects</h3>
+          <h3 className='text-primary'>Live Projects</h3>
           <div className='portfolio_container'>
             {displayedCmsProjects.map((project) =>
               renderProjectCard(project, false)
