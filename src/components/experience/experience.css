@@ -2,8 +2,8 @@
    EXPERIENCE / TECH STACK
    ======================= */
    .experience {
-    padding: 4rem 0; /* shorter vertical padding */
-    background: var(--section-bg); /* match About section */
+    padding: 4rem 0;
+    background: var(--section-bg);
   }
   
   .experience h5 {
@@ -19,7 +19,7 @@
   }
   
   .tech_stack_container {
-    max-width: 1300px; /* wider container */
+    max-width: 1300px;
     margin: 0 auto;
     padding: 0 1rem;
   }
@@ -27,7 +27,7 @@
   /* Grid Layout */
   .tech_categories {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* fixed 2 columns */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
     gap: 2rem;
   }
   
@@ -36,7 +36,7 @@
     background: var(--surface);
     border: 1px solid var(--surface-variant);
     border-radius: var(--border-radius-lg);
-    padding: 1.5rem;
+    padding: 2rem 1.5rem;
     transition: var(--transition);
   }
   
@@ -45,9 +45,9 @@
     box-shadow: var(--shadow-glow);
   }
   
-  /* Title with Dot */
+  /* Title with colored dot */
   .tech_category_title {
-    font-size: 1.15rem;
+    font-size: 1.25rem;
     font-weight: 600;
     color: var(--color-white);
     display: flex;
@@ -89,10 +89,46 @@
     box-shadow: var(--shadow-glow);
   }
   
+  /* CTA Button */
+  .tech_cta_container {
+    text-align: center;
+    margin-top: 3rem;
+  }
+  
+  .view_projects_btn {
+    display: inline-block;
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-white);
+    border: none;
+    border-radius: var(--border-radius);
+    background: linear-gradient(
+      135deg,
+      var(--color-primary),
+      var(--color-primary-variant)
+    );
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+  }
+  
+  .view_projects_btn:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-glow);
+  }
+  
   /* Responsive */
   @media screen and (max-width: 1024px) {
     .tech_categories {
-      grid-template-columns: 1fr; /* stack on smaller screens */
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .tech_pill {
+      font-size: 0.8rem;
+      padding: 0.35rem 0.8rem;
     }
   }
   
