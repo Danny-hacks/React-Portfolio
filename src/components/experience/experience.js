@@ -85,7 +85,7 @@ const Experience = () => {
 
         {/* CTA */}
         <div className='tech_cta_container'>
-          <a href='#projects' className='btn btn-primary'>
+          <a href='#portfolio' className='btn-primary'>
             View Projects
           </a>
         </div>
