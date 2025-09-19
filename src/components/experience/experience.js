@@ -63,7 +63,7 @@ const Experience = () => {
             <div
               key={key}
               className='tech_card'
-              style={{ borderColor: category.color }}
+              // style={{ borderColor: category.color }}
             >
               <h3 className='tech_category_title'>
                 <span

@@ -61,7 +61,7 @@
   background: var(--surface);
   /* padding: 1.5rem; */
   border-radius: var(--border-radius-lg);
-  border: 1px solid var(--body-bg-variant);
+  border: 1px solid transparent;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

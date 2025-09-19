@@ -95,7 +95,7 @@
 
 .soft_skill_card {
     background: var(--surface);
-    border: 1px solid var(--surface-variant);
+    border: 1px solid transparent;
     border-radius: var(--border-radius-lg);
     padding: 1.5rem;
     text-align: center;
