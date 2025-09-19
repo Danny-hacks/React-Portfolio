@@ -58,7 +58,7 @@
 
 /* Portfolio Item / Card */
 .portfolio_item {
-  background: var(--body-bg);
+  background: var(--surface);
   /* padding: 1.5rem; */
   border-radius: var(--border-radius-lg);
   border: 1px solid var(--body-bg-variant);
@@ -112,7 +112,7 @@
   font-size: 0.8rem;
   padding: 0.25rem 0.5rem;
   border-radius: 16px;
-  background: var(--surface);
+  background: var(--body-bg);
   color: var(--color-light);
 }
 
