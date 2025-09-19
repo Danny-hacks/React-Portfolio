@@ -164,31 +164,33 @@ const Portfolio = () => {
 
   return (
     <section id='portfolio'>
-      <h5>Recent Work</h5>
-      <h2>Portfolio</h2>
+      <div className='container'>
+        <h5>Recent Work</h5>
+        <h2>Portfolio</h2>
 
-      {/* CMS Projects */}
-      <div className='portfolio_category'>
-        <h3 className='text-primary'>CMS / Live Projects</h3>
-        <div className='portfolio_container'>
-          {displayedCmsProjects.map((project) =>
-            renderProjectCard(project, false)
-          )}
+        {/* CMS Projects */}
+        <div className='portfolio_category'>
+          <h3 className='text-primary'>CMS / Live Projects</h3>
+          <div className='portfolio_container'>
+            {displayedCmsProjects.map((project) =>
+              renderProjectCard(project, false)
+            )}
+          </div>
+          {cmsTotalPages > 1 &&
+            renderPagination(cmsTotalPages, cmsPage, setCmsPage)}
         </div>
-        {cmsTotalPages > 1 &&
-          renderPagination(cmsTotalPages, cmsPage, setCmsPage)}
-      </div>
 
-      {/* Personal Projects */}
-      <div className='portfolio_category'>
-        <h3 className='text-accent'>Personal / Side Projects</h3>
-        <div className='portfolio_container'>
-          {displayedPersonalProjects.map((project) =>
-            renderProjectCard(project, true)
-          )}
+        {/* Personal Projects */}
+        <div className='portfolio_category'>
+          <h3 className='text-accent'>Personal / Side Projects</h3>
+          <div className='portfolio_container'>
+            {displayedPersonalProjects.map((project) =>
+              renderProjectCard(project, true)
+            )}
+          </div>
+          {personalTotalPages > 1 &&
+            renderPagination(personalTotalPages, personalPage, setPersonalPage)}
         </div>
-        {personalTotalPages > 1 &&
-          renderPagination(personalTotalPages, personalPage, setPersonalPage)}
       </div>
     </section>
   );
