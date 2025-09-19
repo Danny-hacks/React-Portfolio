@@ -26,9 +26,9 @@ const App = () => {
       <div data-aos='fade-up'>
         <Experience />
       </div>
-      <div data-aos='fade-up'>
+      {/* <div data-aos='fade-up'>
         <Services />
-      </div>
+      </div> */}
       <div data-aos='fade-up'>
         <Portfolio />
       </div>

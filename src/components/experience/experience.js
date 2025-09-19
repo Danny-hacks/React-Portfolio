@@ -1,122 +1,106 @@
 import React from "react";
 import "./experience.css";
-import { BsPatchCheckFill } from "react-icons/bs";
 
-const experience = () => {
+const Experience = () => {
+  // 🔧 SUPER EASY TO UPDATE: Just add/remove technologies from these arrays
+  const techStack = {
+    frontend: {
+      title: "Frontend Development",
+      technologies: [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "SASS/SCSS",
+        "Bootstrap",
+      ],
+    },
+    backend: {
+      title: "Backend & Database",
+      technologies: [
+        "Node.js",
+        "PHP",
+        "Java",
+        "Python",
+        "MySQL",
+        "MongoDB",
+        "REST APIs",
+        "GraphQL",
+      ],
+    },
+    tools: {
+      title: "CMS & Tools",
+      technologies: [
+        "WordPress",
+        "Elementor",
+        "WooCommerce",
+        "GoHighLevel",
+        "Shopify",
+        "Git",
+        "Docker",
+        "AWS",
+      ],
+    },
+  };
+
+  // 📊 EASY TO UPDATE: Modify these stats as needed
+  const experienceStats = [
+    { number: "25+", label: "Technologies" },
+    { number: "100+", label: "Projects Built" },
+    { number: "5+", label: "Years Experience" },
+    { number: "50+", label: "Happy Clients" },
+  ];
+
   return (
     <section id='experience'>
-      <h5>What Skills I Have</h5>
-      <h2>My Experience</h2>
+      <h5>What Technologies I Use</h5>
+      <h2>My Technology Stack</h2>
 
-      <div className='container experience_container'>
-        <div className='experience_frontend'>
-          <h3>Frontend Development</h3>
-          <div className='experience_content'>
-            <article className='experience_details'>
-              <BsPatchCheckFill className='experience_details-icon' />
-              <div>
-                <h4>WordPress</h4>
-                <small className='text-light'>Experienced</small>
-              </div>
-            </article>
-            <article className='experience_details'>
-              <BsPatchCheckFill className='experience_details-icon' />
-              <div>
-                <h4>GoHighLevel</h4>
-                <small className='text-light'>Experienced</small>
-              </div>
-            </article>
-            <article className='experience_details'>
-              <BsPatchCheckFill className='experience_details-icon' />
-              <div>
-                <h4>PHP</h4>
-                <small className='text-light'>Intermediate</small>
-              </div>
-            </article>
-            <article className='experience_details'>
-              <BsPatchCheckFill className='experience_details-icon' />
-              <div>
-                <h4>HTML/CSS</h4>
-                <small className='text-light'>Experienced</small>
-              </div>
-            </article>
-            <article className='experience_details'>
-              <BsPatchCheckFill className='experience_details-icon' />
-              <div>
-                <h4>JAVASCRIPT</h4>
-                <small className='text-light'>Experienced</small>
-              </div>
-            </article>
-            <article className='experience_details'>
-              <BsPatchCheckFill className='experience_details-icon' />
-              <div>
-                <h4>REACT JS</h4>
-                <small className='text-light'>Intermediate</small>
-              </div>
-            </article>
-            <article className='experience_details'>
-              <BsPatchCheckFill className='experience_details-icon' />
-              <div>
-                <h4>JAVA</h4>
-                <small className='text-light'>Intermediate</small>
-              </div>
-            </article>
-            <article className='experience_details'>
-              <BsPatchCheckFill className='experience_details-icon' />
-              <div>
-                <h4>NODE JS</h4>
-                <small className='text-light'>Intermediate</small>
-              </div>
-            </article>
-          </div>
+      <div className='container tech_stack_container'>
+        <div className='tech_stack_intro'>
+          <p className='tech_stack_subtitle'>
+            Building Modern Digital Solutions
+          </p>
+          <p className='tech_stack_description'>
+            I work with cutting-edge technologies and tools to create
+            exceptional web experiences, from responsive frontends to robust
+            backends and powerful CMS solutions.
+          </p>
         </div>
 
-        {/* End of Frontend */}
+        <div className='tech_categories'>
+          {Object.entries(techStack).map(([key, category], categoryIndex) => (
+            <div key={key} className='tech_category floating_tech'>
+              <div className='tech_category_header'>
+                <h3 className='tech_category_title'>{category.title}</h3>
+              </div>
 
-        {/* <div className="experience_backend">
-          <h3>Backend Development</h3>
-          <div className="experience_content">
-            <article className="experience_details">
-              <BsPatchCheckFill className='experience_details-icon'/>
-              <div>
-                <h4>NODE JS</h4>
-              <small className="text-light">
-                Experienced
-              </small>
+              <div className='tech_stack_grid'>
+                {category.technologies.map((tech, techIndex) => (
+                  <div key={`${key}-${techIndex}`} className='tech_item'>
+                    <div className='tech_item_name'>{tech}</div>
+                  </div>
+                ))}
               </div>
-            </article>
-            <article className="experience_details">
-              <BsPatchCheckFill className='experience_details-icon'/>
-              <div>
-                <h4>MySQL</h4>
-              <small className="text-light">
-                Intermediate
-              </small>
-              </div>
-            </article>
-            <article className="experience_details">
-              <BsPatchCheckFill className='experience_details-icon'/>
-              <div>
-                <h4>JAVA</h4>
-              <small className="text-light">
-                Intermediate
-              </small>
-              </div>
-            </article>
-            <article className="experience_details">
-              <BsPatchCheckFill className='experience_details-icon'/>
-              <div>
-                <h4>SQL</h4>
-              <small className="text-light">
-                Experienced
-              </small>
-              </div>
-            </article>
-          </div>
-        </div> */}
+            </div>
+          ))}
+        </div>
+
+        {/* Experience Stats */}
+        <div className='tech_stats'>
+          {experienceStats.map((stat, index) => (
+            <div key={index} className='tech_stat'>
+              <span className='tech_stat_number'>{stat.number}</span>
+              <span className='tech_stat_label'>{stat.label}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
 };
 
-export default experience;
+export default Experience;
