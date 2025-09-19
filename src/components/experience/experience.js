@@ -2,8 +2,8 @@ import React from "react";
 import "./experience.css";
 
 const Experience = () => {
-  const techStack = {
-    frontend: {
+  const techStack = [
+    {
       title: "Frontend",
       technologies: [
         "HTML5",
@@ -17,7 +17,7 @@ const Experience = () => {
         "Bootstrap",
       ],
     },
-    backend: {
+    {
       title: "Backend & Database",
       technologies: [
         "Node.js",
@@ -30,7 +30,7 @@ const Experience = () => {
         "GraphQL",
       ],
     },
-    tools: {
+    {
       title: "CMS & Tools",
       technologies: [
         "WordPress",
@@ -43,36 +43,32 @@ const Experience = () => {
         "AWS",
       ],
     },
-  };
+  ];
 
   return (
     <section id='experience'>
       <h5>What I Work With</h5>
       <h2>Technology Stack</h2>
 
-      <div className='container tech_stack_container'>
-        <div className='tech_stack_intro'>
-          <p className='tech_stack_description'>
-            I use modern technologies and frameworks to build fast, scalable,
-            and user-friendly digital experiences. Here’s a snapshot of the
-            tools I work with.
-          </p>
-        </div>
-
-        <div className='tech_categories'>
-          {Object.entries(techStack).map(([key, category]) => (
-            <div key={key} className='tech_category'>
-              <h3 className='tech_category_title'>{category.title}</h3>
-              <div className='tech_stack_grid'>
-                {category.technologies.map((tech, index) => (
-                  <span key={index} className='tech_pill'>
-                    {tech}
-                  </span>
-                ))}
-              </div>
+      <div className='container experience_container'>
+        {techStack.map((category, index) => (
+          <div key={index} className='experience_card'>
+            <h3 className='experience_title'>{category.title}</h3>
+            <div className='experience_content'>
+              {category.technologies.map((tech, idx) => (
+                <span key={idx} className='experience_item'>
+                  {tech}
+                </span>
+              ))}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
+      </div>
+
+      <div className='experience_cta'>
+        <a href='#portfolio' className='btn_gradient'>
+          View Projects
+        </a>
       </div>
     </section>
   );
