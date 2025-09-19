@@ -18,7 +18,8 @@ const cmsProjects = [
     id: 1,
     image: IMG7,
     title: "Harel Mallac Technologies",
-    description: "Official website built with WordPress & Thrive Architect.",
+    description:
+      "Harel Mallac Technologies official site, crafted with WordPress & Thrive Architect for a clean and professional online presence",
     technologies: ["WordPress", "Thrive Architect"],
     demo: "https://harelmallactechnologies.com/",
   },
