@@ -1,7 +1,7 @@
 .container.contact_container{
     width: 58%;
     display: grid;
-    grid-template-columns: 30% 58%;
+    grid-template-columns: 35% 52%;
     gap: 12%;
 }
 
@@ -14,7 +14,7 @@
   
   .contact_option {
     background: var(--surface);
-    padding: 4rem;
+    padding: 1.2rem;
     border-radius: var(--border-radius-lg);
     text-align: center;
     border: 1px solid transparent;
@@ -42,6 +42,7 @@
 }
 .contact_option h5{
     font-size: 1rem;
+    margin-top: 0.7rem;
     color: var(--color-light);
 }
 /* Form */
