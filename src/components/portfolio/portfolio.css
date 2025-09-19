@@ -78,6 +78,8 @@
 .portfolio_item-image {
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   overflow: hidden;
   margin-bottom: 1rem;
 }
