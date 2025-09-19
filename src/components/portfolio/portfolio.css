@@ -40,10 +40,7 @@
   text-align: center;
 }
 
-.portfolio_category h3.text-primary {
-  color: var(--color-white);
-}
-
+.portfolio_category h3.text-primary,
 .portfolio_category h3.text-accent {
   color: var(--color-white);
   margin-top: 2rem;
@@ -59,7 +56,6 @@
 /* Portfolio Item / Card */
 .portfolio_item {
   background: var(--surface);
-  /* padding: 1.5rem; */
   border-radius: var(--border-radius-lg);
   border: 1px solid transparent;
   display: flex;
@@ -76,7 +72,7 @@
 
 /* Image */
 .portfolio_item-image img {
-  border-radius: 8px 8px 0,0 !important;
+  border-radius: 8px 8px 0 0;
   overflow: hidden;
   margin-bottom: 1rem;
 }
@@ -118,16 +114,19 @@
   display: flex;
   gap: 0.75rem;
   flex-wrap: wrap;
+  margin-left: 20px;
 }
 
 .portfolio_item-cta .btn {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.35rem;
   font-size: 0.85rem;
   padding: 0.5rem 0.85rem;
   border-radius: 12px;
-  margin-left: 20px;
+  flex: 1; /* Make buttons flexible for small screens */
+  min-width: 120px; /* Ensure a minimum size */
 }
 
 /* Pagination */
@@ -165,5 +164,16 @@
   .portfolio_item-cta {
     flex-direction: column;
     gap: 0.5rem;
+    margin-left: 0; /* remove extra left margin for small screens */
+  }
+
+  .portfolio_item-cta .btn {
+    width: 100%; /* make buttons full width on mobile */
+  }
+
+  .portfolio_item h4,
+  .portfolio_item p,
+  .portfolio_tech {
+    margin-left: 0; /* align text and tech tags properly on mobile */
   }
 }
