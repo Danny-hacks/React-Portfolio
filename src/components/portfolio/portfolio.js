@@ -9,6 +9,7 @@ import IMG4 from "../../assets/portfolio2.png";
 import IMG5 from "../../assets/portfolio3.PNG";
 import IMG6 from "../../assets/portfolio4.png";
 import IMG7 from "../../assets/HMT-Home.png";
+import IMG8 from "../../assets/SaffCoaching-preview.png";
 
 // =====================
 // Projects Data
@@ -22,6 +23,15 @@ const cmsProjects = [
       "Harel Mallac Technologies official site, crafted with WordPress & Thrive Architect for a clean and professional online presence",
     technologies: ["WordPress", "Thrive Architect"],
     demo: "https://harelmallactechnologies.com/",
+  },
+  {
+    id: 2,
+    image: IMG8,
+    title: "Saff Coaching Co",
+    description:
+      "Saff Coaching Co – Professional website designed for a leadership coach to highlight services and expertise. Built with a clean, modern layout to engage clients and strengthen personal branding.",
+    technologies: ["WordPress", "Thrive Architect"],
+    demo: "https://saffcoachingco.com/",
   },
 ];
 
