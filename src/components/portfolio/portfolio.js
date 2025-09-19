@@ -182,7 +182,7 @@ const Portfolio = () => {
 
         {/* Personal Projects */}
         <div className='portfolio_category'>
-          <h3 className='text-accent'>Personal / Side Projects</h3>
+          <h3 className='text-accent'>Personal Projects</h3>
           <div className='portfolio_container'>
             {displayedPersonalProjects.map((project) =>
               renderProjectCard(project, true)

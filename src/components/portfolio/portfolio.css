@@ -35,17 +35,18 @@
 /* Sub-category Titles */
 .portfolio_category h3 {
   margin-bottom: 2rem;
-  font-size: 1.25rem;
+  font-size: 1.8rem;
   font-weight: 600;
   text-align: center;
 }
 
 .portfolio_category h3.text-primary {
-  color: var(--color-primary);
+  color: var(--color-white);
 }
 
 .portfolio_category h3.text-accent {
-  color: var(--color-accent);
+  color: var(--color-white);
+  margin-top: 2rem;
 }
 
 /* Grid Layout */
