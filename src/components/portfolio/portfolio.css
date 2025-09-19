@@ -58,8 +58,8 @@
 
 /* Portfolio Item / Card */
 .portfolio_item {
-  background: var(--body-bg-variant);
-  padding: 1.5rem;
+  background: var(--body-bg);
+  /* padding: 1.5rem; */
   border-radius: var(--border-radius-lg);
   border: 1px solid var(--body-bg-variant);
   display: flex;
@@ -83,6 +83,7 @@
 /* Title & Description */
 .portfolio_item h4 {
   margin-bottom: 0.5rem;
+  margin-left: 20px;
   font-size: 1.15rem;
   font-weight: 500;
 }
@@ -90,6 +91,7 @@
 .portfolio_item p {
   font-size: 0.9rem;
   margin-bottom: 0.75rem;
+  margin-left: 20px;
   color: var(--color-light);
 }
 
@@ -99,6 +101,7 @@
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: 1rem;
+  margin-left: 20px;
 }
 
 .tech_name {
