@@ -10,6 +10,11 @@ import IMG5 from "../../assets/portfolio3.PNG";
 import IMG6 from "../../assets/portfolio4.png";
 import IMG7 from "../../assets/HMT-Home.png";
 import IMG8 from "../../assets/SaffCoaching-preview.png";
+import IMG9 from "../../assets/RobustRoast-preview.png";
+import IMG10 from "../../assets/MyWheelOfLuck-preview.png";
+import IMG11 from "../../assets/LMC-preview.png";
+import IMG12 from "../../assets/Mauriexcursion-preview.png";
+import IMG13 from "../../assets/JamieLandreman-preview.png";
 
 // =====================
 // Projects Data
@@ -20,7 +25,7 @@ const cmsProjects = [
     image: IMG7,
     title: "Harel Mallac Technologies",
     description:
-      "Harel Mallac Technologies official site, crafted with WordPress & Thrive Architect for a clean and professional online presence",
+      "Harel Mallac Technologies official site, crafted with WordPress & Thrive Architect for a clean and professional online presence.",
     technologies: ["WordPress", "Thrive Architect"],
     demo: "https://harelmallactechnologies.com/",
   },
@@ -29,9 +34,45 @@ const cmsProjects = [
     image: IMG8,
     title: "Saff Coaching Co",
     description:
-      "Saff Coaching Co – Professional website designed for a leadership coach to highlight services and expertise. Built with a clean, modern layout to engage clients and strengthen personal branding.",
+      "Saff Coaching Co – Professional website designed for a leadership coach to highlight services and expertise.",
     technologies: ["WordPress", "Thrive Architect"],
     demo: "https://saffcoachingco.com/",
+  },
+  {
+    id: 3,
+    image: IMG9,
+    title: "Robust Roast",
+    description:
+      "HeatMaster Grill Mat Funnel – A high-converting sales funnel built on GoHighLevel to showcase and sell the reusable grill mat online.",
+    technologies: ["GoHighLevel", "Funnels"],
+    demo: "https://robustroast.com/grill-mat",
+  },
+  {
+    id: 4,
+    image: IMG10,
+    title: "My Wheel Of Luck",
+    description:
+      "MyWheelOfLuck.com – Website built on GoHighLevel featuring interactive spin wheels to capture leads and boost user engagement.",
+    technologies: ["GoHighLevel"],
+    demo: "https://mywheelofluck.com",
+  },
+  {
+    id: 5,
+    image: IMG11,
+    title: "Labourdonnais Management Ltd",
+    description:
+      "Labourdonnais Management Ltd – A corporate website for a licensed management company in Mauritius, showcasing their services.",
+    technologies: ["WordPress", "Thrive Architect"],
+    demo: "https://www.lmcltd.mu/",
+  },
+  {
+    id: 6,
+    image: IMG12,
+    title: "Mauriexcursion",
+    description:
+      "Mauriexcursion – A WordPress site built with Elementor, crafted to showcase Mauritius tours and provide a smooth booking experience.",
+    technologies: ["WordPress", "Elementor"],
+    demo: "https://mauriexcursion.com/",
   },
 ];
 
