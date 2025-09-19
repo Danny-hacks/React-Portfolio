@@ -62,7 +62,7 @@ const Experience = () => {
           {Object.entries(techStack).map(([key, category]) => (
             <div
               key={key}
-              className='tech_card floating-glow'
+              className='tech_card'
               style={{ borderColor: category.color }}
             >
               <h3 className='tech_category_title'>
