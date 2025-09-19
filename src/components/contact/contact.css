@@ -14,7 +14,7 @@
   
   .contact_option {
     background: var(--surface);
-    padding: 1.8rem;
+    padding: 2.5rem;
     border-radius: var(--border-radius-lg);
     text-align: center;
     border: 1px solid transparent;
@@ -37,10 +37,14 @@
     display: inline-block;
     font-size: 0.8rem;
 }
-.contact_option h5{
+.contact_option h4{
+    font-size: 1.2rem;
     color: var(--color-light);
 }
-
+.contact_option h5{
+    font-size: 1rem;
+    color: var(--color-light);
+}
 /* Form */
 form{
     display: flex;

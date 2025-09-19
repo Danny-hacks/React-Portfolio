@@ -75,8 +75,8 @@
 }
 
 /* Image */
-.portfolio_item-image {
-border-radius: 8px 8px 0,0;
+.portfolio_item-image img {
+  border-radius: 8px 8px 0,0 !important;
   overflow: hidden;
   margin-bottom: 1rem;
 }
