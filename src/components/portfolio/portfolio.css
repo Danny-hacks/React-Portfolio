@@ -66,6 +66,7 @@
   flex-direction: column;
   justify-content: space-between;
   transition: border-color 0.3s ease, transform 0.3s ease;
+  padding-bottom: 20px;
 }
 
 .portfolio_item:hover {
@@ -75,7 +76,8 @@
 
 /* Image */
 .portfolio_item-image {
-  border-radius: var(--border-radius);
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
   overflow: hidden;
   margin-bottom: 1rem;
 }
@@ -126,6 +128,7 @@
   font-size: 0.85rem;
   padding: 0.5rem 0.85rem;
   border-radius: 12px;
+  margin-left: 20px;
 }
 
 /* Pagination */
