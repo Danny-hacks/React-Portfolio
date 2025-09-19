@@ -1,18 +1,6 @@
 import React, { useState } from "react";
 import "./portfolio.css";
-import {
-  FaGithub,
-  FaExternalLinkAlt,
-  FaReact,
-  FaFigma,
-  FaJs,
-  FaHtml5,
-  FaCss3Alt,
-  FaWordpress, // ✅ WordPress
-  FaElementor, // ✅ Elementor (if available; else use FaTools)
-  FaShopify, // ❌ No WooCommerce icon; Shopify used as close alt
-  FaTools, // ⚙️ Substitute for Thrive Architect or Go HighLevel
-} from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 import IMG1 from "../../assets/TaskManagementFIgma.png";
 import IMG2 from "../../assets/WeRecycleFigma.png";
@@ -22,149 +10,184 @@ import IMG5 from "../../assets/portfolio3.PNG";
 import IMG6 from "../../assets/portfolio4.png";
 import IMG7 from "../../assets/HMT-Home.png";
 
-const projects = [
+// Split projects into CMS and Personal
+const cmsProjects = [
   {
     id: 1,
-    image: IMG1,
-    title: "Task Management Figma Design",
-    technologies: ["Figma"],
-    github:
-      "https://www.figma.com/design/9fDYFK9y2OcAnigBzIFU7n/Task-Management-Mobile-App?node-id=0-1&t=IXug0AaG1CUWEj3I-1",
-    demo: "https://www.figma.com/proto/9fDYFK9y2OcAnigBzIFU7n/Task-Management-Mobile-App?node-id=5-1974&p=f",
+    image: IMG7,
+    title: "Harel Mallac Technologies",
+    description: "Official website built with WordPress and Thrive Architect.",
+    technologies: ["WordPress", "Thrive Architect"],
+    liveDemo: "https://harelmallactechnologies.com/",
   },
   {
     id: 2,
-    image: IMG2,
-    title: "WeRecycle Figma Design",
+    image: IMG1,
+    title: "Task Management Figma Design",
+    description: "High fidelity prototype for a task management mobile app.",
     technologies: ["Figma"],
-    github:
-      "https://www.figma.com/design/bcbOfe60fmQu3JUCFDC5Ah/Recycling-UI-Design?node-id=0-1",
-    demo: "https://acrobat.adobe.com/id/urn:aaid:sc:EU:205d2c71-63ef-488b-abad-1efae3c498d8",
+    liveDemo:
+      "https://www.figma.com/proto/9fDYFK9y2OcAnigBzIFU7n/Task-Management-Mobile-App?node-id=5-1974&p=f",
   },
   {
     id: 3,
-    image: IMG3,
-    title: "TodoList WebApp",
-    technologies: ["JavaScript", "HTML", "CSS"],
-    github: "https://github.com/Danny-hacks/TodoList-WebApp",
-    demo: "https://webapp-todolist.netlify.app",
-  },
-  {
-    id: 4,
-    image: IMG4,
-    title: "Color Generator App",
-    technologies: ["React", "CSS"],
-    github: "https://github.com/Danny-hacks/Color-Generator",
-    demo: "https://colour-finder.netlify.app/",
-  },
-  {
-    id: 5,
-    image: IMG5,
-    title: "Javascript Counter",
-    technologies: ["JavaScript", "HTML", "CSS"],
-    github: "https://github.com/Danny-hacks/Javascript-Counter",
-    demo: "https://js-counter-demo.netlify.app",
-  },
-  {
-    id: 6,
-    image: IMG6,
-    title: "Background Color Flipper",
-    technologies: ["JavaScript", "HTML", "CSS"],
-    github: "https://github.com/Danny-hacks/Background-Color-Flipper",
-    demo: "https://bvckground-color-flipper.netlify.app",
-  },
-  {
-    id: 7,
-    image: IMG7,
-    title: "Harel Mallac Technologies - Official Website",
-    technologies: ["WordPress", "Thrive Architect"],
-    //    github: "https://harelmallactechnologies.com/",
-    demo: "https://harelmallactechnologies.com/",
+    image: IMG2,
+    title: "WeRecycle Figma Design",
+    description: "Recycling app UI/UX design project on Figma.",
+    technologies: ["Figma"],
+    liveDemo:
+      "https://acrobat.adobe.com/id/urn:aaid:sc:EU:205d2c71-63ef-488b-abad-1efae3c498d8",
   },
 ];
 
-const techIcons = {
-  Figma: <FaFigma />,
-  React: <FaReact />,
-  JavaScript: <FaJs />,
-  HTML: <FaHtml5 />,
-  CSS: <FaCss3Alt />,
-  WordPress: <FaWordpress />,
-  Elementor: <FaElementor />, // Or fallback to <FaTools />
-  "Thrive Architect": <FaTools />,
-  WooCommerce: <FaShopify />, // Substitute for WooCommerce
-  "Go HighLevel": <FaTools />, // Substitute icon
-};
+const personalProjects = [
+  {
+    id: 1,
+    image: IMG3,
+    title: "TodoList WebApp",
+    description: "Simple to-do list app built with vanilla JavaScript.",
+    technologies: ["JavaScript", "HTML", "CSS"],
+    github: "https://github.com/Danny-hacks/TodoList-WebApp",
+    liveDemo: "https://webapp-todolist.netlify.app",
+  },
+  {
+    id: 2,
+    image: IMG4,
+    title: "Color Generator App",
+    description: "React app to generate random color palettes.",
+    technologies: ["React", "CSS"],
+    github: "https://github.com/Danny-hacks/Color-Generator",
+    liveDemo: "https://colour-finder.netlify.app/",
+  },
+  {
+    id: 3,
+    image: IMG5,
+    title: "JavaScript Counter",
+    description: "Counter app with increment, decrement, and reset features.",
+    technologies: ["JavaScript", "HTML", "CSS"],
+    github: "https://github.com/Danny-hacks/Javascript-Counter",
+    liveDemo: "https://js-counter-demo.netlify.app",
+  },
+  {
+    id: 4,
+    image: IMG6,
+    title: "Background Color Flipper",
+    description: "Random background color generator built with JavaScript.",
+    technologies: ["JavaScript", "HTML", "CSS"],
+    github: "https://github.com/Danny-hacks/Background-Color-Flipper",
+    liveDemo: "https://bvckground-color-flipper.netlify.app",
+  },
+];
 
-const ITEMS_PER_PAGE = 6;
+const ITEMS_PER_PAGE = 3; // easier to manage two columns
 
-const Portfolio = () => {
+const PortfolioCategory = ({ projects, isCMS }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = Math.ceil(projects.length / ITEMS_PER_PAGE);
 
-  const displayedProjects = [...projects]
-    .reverse()
-    .slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE);
+  const displayedProjects = projects.slice(
+    (currentPage - 1) * ITEMS_PER_PAGE,
+    currentPage * ITEMS_PER_PAGE
+  );
 
   return (
-    <section id='portfolio'>
-      <h5>Recent Projects</h5>
-      <h2>Portfolio</h2>
-
-      <div className='container portfolio_container'>
+    <div className='portfolio_category'>
+      <div className='portfolio_container'>
         {displayedProjects.map(
-          ({ id, image, title, github, demo, technologies }) => (
+          ({
+            id,
+            image,
+            title,
+            description,
+            technologies,
+            github,
+            liveDemo,
+          }) => (
             <article key={id} className='portfolio_item'>
               <div className='portfolio_item-image'>
                 <img src={image} alt={title} />
               </div>
               <h3>{title}</h3>
-
+              <p>{description}</p>
               <div className='portfolio_tech'>
                 {technologies.map((tech, index) => (
-                  <span key={index} className='tech_icon'>
-                    {techIcons[tech] || <FaTools />} <small>{tech}</small>
+                  <span key={index} className='tech_name'>
+                    {tech}
                   </span>
                 ))}
               </div>
-
               <div className='portfolio_item-cta'>
-                <a
-                  href={github}
-                  className='btn'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  <FaGithub /> GitHub
-                </a>
-                <a
-                  href={demo}
-                  className='btn btn-primary'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  <FaExternalLinkAlt /> Demo
-                </a>
+                {isCMS && liveDemo && (
+                  <a
+                    href={liveDemo}
+                    className='btn btn-primary'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    <FaExternalLinkAlt /> View Site
+                  </a>
+                )}
+                {!isCMS && (
+                  <>
+                    {github && (
+                      <a
+                        href={github}
+                        className='btn'
+                        target='_blank'
+                        rel='noreferrer'
+                      >
+                        <FaGithub /> GitHub
+                      </a>
+                    )}
+                    {liveDemo && (
+                      <a
+                        href={liveDemo}
+                        className='btn btn-primary'
+                        target='_blank'
+                        rel='noreferrer'
+                      >
+                        <FaExternalLinkAlt /> Live Demo
+                      </a>
+                    )}
+                  </>
+                )}
               </div>
             </article>
           )
         )}
       </div>
 
-      {/* Pagination Controls */}
-      <div className='portfolio_pagination'>
-        {Array.from({ length: totalPages }, (_, i) => (
-          <button
-            key={i + 1}
-            className={`pagination_btn ${
-              currentPage === i + 1 ? "active" : ""
-            }`}
-            onClick={() => setCurrentPage(i + 1)}
-          >
-            {i + 1}
-          </button>
-        ))}
-      </div>
+      {/* Pagination */}
+      {totalPages > 1 && (
+        <div className='portfolio_pagination'>
+          {Array.from({ length: totalPages }, (_, i) => (
+            <button
+              key={i + 1}
+              className={`pagination_btn ${
+                currentPage === i + 1 ? "active" : ""
+              }`}
+              onClick={() => setCurrentPage(i + 1)}
+            >
+              {i + 1}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
+const Portfolio = () => {
+  return (
+    <section id='portfolio'>
+      <h5>Recent Work</h5>
+      <h2>Portfolio</h2>
+
+      <h3 className='portfolio_category_title'>CMS & Live Projects</h3>
+      <PortfolioCategory projects={cmsProjects} isCMS={true} />
+
+      <h3 className='portfolio_category_title'>Personal / Side Projects</h3>
+      <PortfolioCategory projects={personalProjects} isCMS={false} />
     </section>
   );
 };
