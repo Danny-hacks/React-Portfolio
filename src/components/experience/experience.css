@@ -3,19 +3,7 @@
    ======================= */
    .experience {
     padding: 4rem 0;
-    background: var(--section-bg);
-  }
-  
-  .experience h5 {
-    text-align: center;
-    color: var(--color-light);
-    margin-bottom: 0.5rem;
-  }
-  
-  .experience h2 {
-    text-align: center;
-    color: var(--color-primary);
-    margin-bottom: 2.5rem;
+    background: var(--body-bg-secondary);
   }
   
   .tech_stack_container {
@@ -27,7 +15,7 @@
   /* Grid Layout */
   .tech_categories {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
   
@@ -41,15 +29,14 @@
   }
   
   .tech_card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-glow);
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-glow), var(--shadow-lg);
   }
   
   /* Title with colored dot */
   .tech_category_title {
     font-size: 1.25rem;
     font-weight: 600;
-    color: var(--color-white);
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
@@ -75,7 +62,7 @@
     font-size: 0.9rem;
     font-weight: 500;
     color: var(--color-light);
-    background: var(--body-bg-variant);
+    background: var(--body-bg);
     border: 1px solid var(--surface-variant);
     border-radius: 20px;
     transition: all 0.3s ease;
@@ -89,33 +76,10 @@
     box-shadow: var(--shadow-glow);
   }
   
-  /* CTA Button */
+  /* CTA Button Container */
   .tech_cta_container {
     text-align: center;
     margin-top: 3rem;
-  }
-  
-  .view_projects_btn {
-    display: inline-block;
-    padding: 0.9rem 2rem;
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--color-white);
-    border: none;
-    border-radius: var(--border-radius);
-    background: linear-gradient(
-      135deg,
-      var(--color-primary),
-      var(--color-primary-variant)
-    );
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
-    text-decoration: none;
-  }
-  
-  .view_projects_btn:hover {
-    transform: scale(1.05);
-    box-shadow: var(--shadow-glow);
   }
   
   /* Responsive */

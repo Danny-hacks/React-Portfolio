@@ -2,11 +2,10 @@ import React from "react";
 import "./experience.css";
 
 const Experience = () => {
-  // Technology stack with color for each category
   const techStack = {
     frontend: {
       title: "Frontend",
-      color: "var(--color-accent-frontend)",
+      color: "var(--color-primary)",
       technologies: [
         "HTML5",
         "CSS3",
@@ -21,7 +20,7 @@ const Experience = () => {
     },
     backend: {
       title: "Backend & Database",
-      color: "var(--color-accent-backend)",
+      color: "var(--color-primary-variant)",
       technologies: [
         "Node.js",
         "PHP",
@@ -35,7 +34,7 @@ const Experience = () => {
     },
     tools: {
       title: "CMS & Tools",
-      color: "var(--color-accent-tools)",
+      color: "var(--body-bg-variant)",
       technologies: [
         "WordPress",
         "Elementor",
@@ -57,7 +56,11 @@ const Experience = () => {
       <div className='container tech_stack_container'>
         <div className='tech_categories'>
           {Object.entries(techStack).map(([key, category]) => (
-            <div key={key} className='tech_card'>
+            <div
+              key={key}
+              className='tech_card floating-glow'
+              style={{ borderColor: category.color }}
+            >
               <h3 className='tech_category_title'>
                 <span
                   className='category_dot'
@@ -66,8 +69,8 @@ const Experience = () => {
                 {category.title}
               </h3>
               <div className='tech_stack_grid'>
-                {category.technologies.map((tech, index) => (
-                  <span key={index} className='tech_pill'>
+                {category.technologies.map((tech, idx) => (
+                  <span key={idx} className='tech_pill'>
                     {tech}
                   </span>
                 ))}
@@ -76,9 +79,9 @@ const Experience = () => {
           ))}
         </div>
 
-        {/* CTA Button */}
+        {/* CTA */}
         <div className='tech_cta_container'>
-          <a href='#projects' className='view_projects_btn'>
+          <a href='#projects' className='btn btn-primary'>
             View Projects
           </a>
         </div>
