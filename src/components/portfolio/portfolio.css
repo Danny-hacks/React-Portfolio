@@ -170,4 +170,7 @@
     flex-direction: column;
     gap: 0.5rem;
   }
+  .portfolio_item-cta .btn {
+    width: 48%; 
+  }
 }
