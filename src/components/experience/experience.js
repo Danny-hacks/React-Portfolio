@@ -83,12 +83,12 @@ const Experience = () => {
           ))}
         </div>
 
-        {/* CTA */}
+        {/* CTA
         <div className='tech_cta_container'>
           <a href='#portfolio' className='btn-primary'>
             View Projects
           </a>
-        </div>
+        </div> */}
       </div>
     </section>
   );

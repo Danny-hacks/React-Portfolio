@@ -18,15 +18,14 @@
   /* Category Cards */
   .tech_card {
     background: var(--surface);
-    border: 1px solid var(--body-bg-variant);
+    border: 1px solid var(--surface-variant);
     border-radius: var(--border-radius-lg);
     padding: 2rem 1.5rem;
-    transition: border-color 0.3s ease, transform 0.3s ease;
+    transition: var(--transition);
   }
   
-  /* Remove zoom/hover shadow effect */
   .tech_card:hover {
-    transform: none;
+    transform: translateY(-3px);
     border-color: var(--color-primary);
   }
   
