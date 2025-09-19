@@ -3,24 +3,27 @@ import "./experience.css";
 
 const Experience = () => {
   const techStack = {
+    tools: {
+      title: "CMS & Tools",
+      color: "var(--color-primary)",
+      technologies: [
+        "WordPress",
+        "Elementor",
+        "WooCommerce",
+        "GoHighLevel",
+        "Git",
+      ],
+    },
+
     frontend: {
       title: "Frontend",
       color: "var(--color-primary)",
-      technologies: [
-        "HTML5",
-        "CSS3",
-        "JavaScript",
-        "React",
-        "Next.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "SASS/SCSS",
-        "Bootstrap",
-      ],
+      technologies: ["HTML5", "CSS3", "JavaScript", "React", "Bootstrap"],
     },
+
     backend: {
-      title: "Backend & Database",
-      color: "var(--color-primary-variant)",
+      title: "Backend",
+      color: "var(--color-primary)",
       technologies: [
         "Node.js",
         "PHP",
@@ -29,21 +32,22 @@ const Experience = () => {
         "MySQL",
         "MongoDB",
         "REST APIs",
-        "GraphQL",
       ],
     },
-    tools: {
-      title: "CMS & Tools",
-      color: "var(--body-bg-variant)",
+
+    itSupport: {
+      title: "IT Support & Networking",
+      color: "var(--color-primary)",
       technologies: [
-        "WordPress",
-        "Elementor",
-        "WooCommerce",
-        "GoHighLevel",
-        "Shopify",
-        "Git",
-        "Docker",
-        "AWS",
+        "Troubleshooting",
+        "Windows OS",
+        "Active Directory",
+        "Firewalls & Security",
+        "Sophos Firewall",
+        "Hardware/Software Troubleshooting",
+        "Remote Assistance",
+        "Help Desk Support",
+        "System Monitoring & Alerts",
       ],
     },
   };
@@ -51,7 +55,7 @@ const Experience = () => {
   return (
     <section className='experience' id='experience'>
       <h5>What I Work With</h5>
-      <h2>Technology Stack</h2>
+      <h2>Technology Stack & Experience</h2>
 
       <div className='container tech_stack_container'>
         <div className='tech_categories'>

@@ -1,10 +1,6 @@
 /* =======================
    EXPERIENCE / TECH STACK
    ======================= */
-   .experience {
-    padding: 4rem 0;
-    background: var(--body-bg-secondary);
-  }
   
   .tech_stack_container {
     max-width: 1300px;
