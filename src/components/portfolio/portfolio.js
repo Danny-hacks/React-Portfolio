@@ -14,7 +14,8 @@ import IMG9 from "../../assets/RobustRoast-preview.png";
 import IMG10 from "../../assets/MyWheelOfLuck-preview.png";
 import IMG11 from "../../assets/LMC-preview.png";
 import IMG12 from "../../assets/Mauriexcursion-preview.png";
-import IMG13 from "../../assets/JamieLandreman-preview.png";
+import IMG13 from "../../assets/TheSoccerFramework-preview.png";
+import IMG14 from "../../assets/JamieLandreman-preview.png";
 
 // =====================
 // Projects Data
@@ -73,6 +74,24 @@ const cmsProjects = [
       "Mauriexcursion – A WordPress site built with Elementor, crafted to showcase Mauritius tours and provide a smooth booking experience.",
     technologies: ["WordPress", "Elementor"],
     demo: "https://mauriexcursion.com/",
+  },
+  {
+    id: 7,
+    image: IMG13,
+    title: "The Soccer Framework",
+    description:
+      "High-converting GoHighLevel funnel for Riley Lynch's Soccer Framework, helping parents connect their kids with the expert-led soccer training program.",
+    technologies: ["GoHighLevel", "Funnels", "Email Campaign & Automation"],
+    demo: "https://soccerframework.com/elite",
+  },
+  {
+    id: 8,
+    image: IMG14,
+    title: "Jamie Landreman",
+    description:
+      "Jamie Landreman – Professional GoHighLevel funnel for Jamie Landreman, designed to showcase services and help business owners scale with proven systems.",
+    technologies: ["GoHighLevel", "Funnels", "Email Campaign & Automation"],
+    demo: "https://jamielandreman.com/",
   },
 ];
 
