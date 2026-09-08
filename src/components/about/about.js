@@ -1,16 +1,17 @@
 import React from "react";
 import ME from "../../assets/me-about.jpg";
 import "./about.css";
-import { FaLaptopCode, FaLightbulb, FaUsers, FaBolt } from "react-icons/fa";
+import { FaUsers, FaBolt } from "react-icons/fa";
 
 const About = () => {
   const profileData = {
     title: "Web Developer",
     subtitle: "Crafting Digital Experiences",
-    description: `I'm a passionate web developer and designer specializing in creating 
-                 SEO-friendly websites using modern technologies. I build high-converting funnels 
-                 and landing pages, customize themes and plugins, and handle CRM integrations, 
-                 automation, tracking, and performance optimization to deliver exceptional digital experiences.`,
+    description: `I'm a Web Developer specializing in SEO-friendly WordPress and Elementor
+                 websites, plus GoHighLevel funnels and CRM automation. I've delivered 15+ client
+                 sites, including Fillin (formerly Engen Mauritius) and the Artemis Hospitals
+                 Mauritius network, from theme and plugin customization to CRM integrations,
+                 tracking, and performance optimization.`,
   };
 
   const softSkills = [

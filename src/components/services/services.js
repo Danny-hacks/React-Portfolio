@@ -56,7 +56,10 @@ const services = () => {
             </li>
             <li>
               <BiCheck className='service_list-icon' />
-              <p>Integrating CRM tools like Go Highlevel.</p>
+              <p>
+                Building CRM pipelines and automation workflows on
+                GoHighLevel for client lead management.
+              </p>
             </li>
           </ul>
         </article>

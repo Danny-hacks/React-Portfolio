@@ -6,9 +6,9 @@ import {SiNetlify} from 'react-icons/si';
 const headerSocials = () => {
   return (
     <div className='header_socials'>
-        <a href="https://www.linkedin.com/in/daniel-obiefule-2a13381a3/" target="_blank"><BsLinkedin/></a>
-        <a href="https://github.com/Danny-hacks" target="_blank"><BsGithub/></a>
-        <a href="https://app.netlify.com/teams/danny-hacks/sites" target="_blank"><SiNetlify/></a>
+        <a href="https://www.linkedin.com/in/daniel-obiefule-2a13381a3/" target="_blank" rel="noreferrer"><BsLinkedin/></a>
+        <a href="https://github.com/Danny-hacks" target="_blank" rel="noreferrer"><BsGithub/></a>
+        <a href="https://app.netlify.com/teams/danny-hacks/sites" target="_blank" rel="noreferrer"><SiNetlify/></a>
     </div>
   )
 }

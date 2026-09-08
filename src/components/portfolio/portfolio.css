@@ -79,6 +79,16 @@
   border-radius: 8px 8px 0,0 !important;
   overflow: hidden;
   margin-bottom: 1rem;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio_item-image a {
+  display: block;
+  cursor: pointer;
+}
+
+.portfolio_item-image a:hover img {
+  opacity: 0.85;
 }
 
 /* Title & Description */
@@ -153,9 +163,25 @@
 }
 
 .pagination_btn.active,
-.pagination_btn:hover {
+.pagination_btn:hover:not(:disabled) {
   background-color: var(--color-primary);
   color: #fff;
+}
+
+.pagination_btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.pagination_nav {
+  font-weight: 700;
+}
+
+.pagination_ellipsis {
+  display: flex;
+  align-items: center;
+  color: var(--color-light);
+  padding: 0.4rem 0.2rem;
 }
 
 /* Responsive */

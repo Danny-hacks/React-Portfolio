@@ -7,18 +7,18 @@ import Typewriter from "./Typewriter";
 
 const Header = () => {
   return (
-    <header>
+    <header id='home'>
       <div className='container header_container'>
         <h5>Hello, I'm</h5>
         <h1 className='fade-in'>Daniel Obiefule</h1>
         <h5 className='text-light'>
-          <Typewriter text='Software Engineer - Web Developer' />
+          <Typewriter text='A Web Developer' />
         </h5>
         <Cta />
         <HeaderSocials />
 
         <div className='me'>
-          <img src={Me} alt='me' />
+          <img src={Me} alt='Daniel Obiefule, Web Developer' />
         </div>
 
         <a href='#contact' className='scroll_down'>

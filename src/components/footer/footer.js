@@ -1,13 +1,12 @@
 import React from "react";
 import "./footer.css";
-import { IoLogoTwitter } from "react-icons/io";
 import { BsLinkedin } from "react-icons/bs";
 
 const Footer = () => {
   return (
     <footer>
       <a href='#' className='footer_logo'>
-        Maestro
+        Daniel Obiefule
       </a>
 
       <ul className='permalinks'>
@@ -33,13 +32,14 @@ const Footer = () => {
         <a
           href='https://www.linkedin.com/in/daniel-obiefule-2a13381a3/'
           target='_blank'
+          rel='noreferrer'
         >
           <BsLinkedin />
         </a>
       </div>
 
       <div className='footer_copyright'>
-        <small>&copy; Maestro. All rights reserved</small>
+        <small>&copy; {new Date().getFullYear()} Daniel Obiefule. All rights reserved</small>
       </div>
     </footer>
   );

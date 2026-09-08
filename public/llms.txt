@@ -1,0 +1,21 @@
+# Daniel Obiefule - Web Developer Portfolio
+
+> Portfolio site for Daniel Obiefule, a Web Developer based in Mauritius specializing in WordPress, Elementor, and GoHighLevel funnels and CRM automation.
+
+## About
+
+Daniel Obiefule is a Web Developer who has delivered 15+ client websites, including Fillin (formerly Engen Mauritius) and the Artemis Hospitals Mauritius network. He builds SEO-friendly WordPress and Elementor websites, GoHighLevel funnels, and CRM automation workflows, and previously worked as an IT Support and Network Security Engineer Intern.
+
+## Sections
+
+- About: background, specialization, and soft skills
+- Experience: technology stack across CMS & tools (WordPress, Elementor, Thrive Architect, WooCommerce, GoHighLevel, Zapier, Git), frontend (HTML5, CSS3, JavaScript, React, Bootstrap), backend (Node.js, PHP, Java, Python, MySQL, MongoDB, REST APIs), and IT support/networking
+- Services: front-end development & web design, WordPress & funnels, site maintenance & optimization
+- Portfolio: live client projects (WordPress/Elementor sites and GoHighLevel funnels) and personal projects (Figma designs, JavaScript apps)
+- Contact: email and WhatsApp
+
+## Links
+
+- LinkedIn: https://www.linkedin.com/in/daniel-obiefule-2a13381a3/
+- GitHub: https://github.com/Danny-hacks
+- Email: obiefuledaniel@gmail.com

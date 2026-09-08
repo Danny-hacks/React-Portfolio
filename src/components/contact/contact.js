@@ -1,7 +1,6 @@
 import React from "react";
 import "./contact.css";
 import { MdOutlineEmail } from "react-icons/md";
-import { RiTwitterLine } from "react-icons/ri";
 import { BsWhatsapp } from "react-icons/bs";
 import { useRef } from "react";
 import emailjs from "emailjs-com";
@@ -41,7 +40,7 @@ const Contact = () => {
             <MdOutlineEmail className='contact_option-icon' />
             <h4>Email</h4>
             <h5>obiefuledaniel@gmail.com</h5>
-            <a href='mailto:obiefuledaniel@gmail.com' target='_blank'>
+            <a href='mailto:obiefuledaniel@gmail.com' target='_blank' rel='noreferrer'>
               Send a message
             </a>
           </article>
@@ -55,7 +54,7 @@ const Contact = () => {
             <BsWhatsapp className='contact_option-icon' />
             <h4>Whatsapp</h4>
             <h5>+23058587652</h5>
-            <a href='https://wa.me/+23058587652' target='_blank'>
+            <a href='https://wa.me/+23058587652' target='_blank' rel='noreferrer'>
               Send a message
             </a>
           </article>

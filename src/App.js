@@ -20,24 +20,24 @@ const App = () => {
         <Header />
       </div>
       <Nav />
-      <div data-aos='fade-up'>
-        <About />
-      </div>
-      <div data-aos='fade-up'>
-        <Experience />
-      </div>
-      {/* <div data-aos='fade-up'>
-        <Services />
-      </div> */}
-      <div data-aos='fade-up'>
-        <Portfolio />
-      </div>
-      <div data-aos='fade-up'>
-        <Contact />
-      </div>
-      {/* <div data-aos='fade-up'>
-        <Footer />
-      </div> */}
+      <main>
+        <div data-aos='fade-up'>
+          <About />
+        </div>
+        <div data-aos='fade-up'>
+          <Experience />
+        </div>
+        <div data-aos='fade-up'>
+          <Services />
+        </div>
+        <div data-aos='fade-up'>
+          <Portfolio />
+        </div>
+        <div data-aos='fade-up'>
+          <Contact />
+        </div>
+      </main>
+      <Footer />
     </>
   );
 };

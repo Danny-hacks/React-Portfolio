@@ -9,8 +9,10 @@ const Experience = () => {
       technologies: [
         "WordPress",
         "Elementor",
+        "Thrive Architect",
         "WooCommerce",
         "GoHighLevel",
+        "Zapier",
         "Git",
       ],
     },
