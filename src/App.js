@@ -7,6 +7,7 @@ import Services from "./components/services/services";
 import Portfolio from "./components/portfolio/portfolio";
 import Contact from "./components/contact/contact";
 import Footer from "./components/footer/footer";
+import ScrollTop from "./components/scrollTop/ScrollTop";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -38,6 +39,7 @@ const App = () => {
         </div>
       </main>
       <Footer />
+      <ScrollTop />
     </>
   );
 };
