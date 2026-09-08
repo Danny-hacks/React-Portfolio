@@ -5,13 +5,13 @@ import { FaUsers, FaBolt } from "react-icons/fa";
 
 const About = () => {
   const profileData = {
-    title: "Web Developer",
-    subtitle: "Crafting Digital Experiences",
-    description: `I'm a Web Developer specializing in SEO-friendly WordPress and Elementor
-                 websites, plus GoHighLevel funnels and CRM automation. I've delivered 15+ client
-                 sites, including Fillin (formerly Engen Mauritius) and the Artemis Hospitals
-                 Mauritius network, from theme and plugin customization to CRM integrations,
-                 tracking, and performance optimization.`,
+    title: "Software Engineer",
+    subtitle: "Currently Focused on Web Development",
+    description: `I'm a Software Engineer currently focused on web development, building SEO-friendly
+                 WordPress and Elementor websites plus GoHighLevel funnels and CRM automation. I've
+                 delivered 15+ client sites, including Fillin (formerly Engen Mauritius) and the
+                 Artemis Hospitals Mauritius network, from theme and plugin customization to CRM
+                 integrations, tracking, and performance optimization.`,
   };
 
   const softSkills = [
